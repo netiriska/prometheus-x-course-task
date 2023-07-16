@@ -9,9 +9,9 @@ export default function MyRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Header />}>
-        <Route path="/" element={<BookList />} />
+        <Route path="/" element={<Signin />} />
         <Route path="/specificbook" element={<SpecificBook />} />
-        <Route path="/signin" element={<Signin />} />
+        <Route path="/booklist" element={<BookList />} />
       </Route>
     </Routes>
   );

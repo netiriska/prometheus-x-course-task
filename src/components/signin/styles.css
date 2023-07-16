@@ -1,3 +1,5 @@
+
+
 /* Спочатку очищаємо всі відступи і межі 
 * - звертаємось до абсолютно всіх тегів на сторінці */
 * {
@@ -153,11 +155,11 @@ header {
   
 }
 #username {
-  background: url(/images/signin/person-heart.svg) no-repeat scroll 7px 7px;
+  /* background: url(/images/signin/person-heart.svg) no-repeat scroll 7px 7px; */
   padding-left:30px;
-}
-#password {
-  background: url(/images/signin/person-fill-lock.svg) no-repeat scroll 7px 7px;
+} */
+ #password {
+  /* background: url(/images/signin/person-fill-lock.svg) no-repeat scroll 7px 7px; */
   padding-left:30px;
 }
 
@@ -173,7 +175,7 @@ header {
   font-weight: bold;
   align-self: center;
   padding: 0 8px;
-  background: url(/images/signin/unlock-fill.svg) no-repeat scroll 7px 7px;
+  /* background: url(/images/signin/unlock-fill.svg) no-repeat scroll 7px 7px; */
   padding-left:30px;
 }
 /* +++++++++++++++ */
