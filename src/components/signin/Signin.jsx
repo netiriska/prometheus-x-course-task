@@ -1,5 +1,6 @@
 import avatar from "../../images/signin/avatar.png";
 import "./styles.css";
+import Footer from "../footer/footer";
 
 export default function Signin() {
   return (
@@ -38,6 +39,7 @@ export default function Signin() {
           </form>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
