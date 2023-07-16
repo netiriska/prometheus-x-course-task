@@ -5,8 +5,8 @@ export default function Header() {
   return (
     <header>
       <a href="/" className="main-header">
-        WITH LOVE
-        <img src={logo} alt="" /> BOOK STORE / Khomenko Iryna
+        WITH LOVE 
+        <img src={ logo } alt="" /> BOOK STORE / Khomenko Iryna
       </a>
       <nav>
         <div>
