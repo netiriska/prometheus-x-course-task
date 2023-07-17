@@ -158,10 +158,6 @@ header {
   background: url(../../images/signin/person-heart.svg) no-repeat scroll 7px 7px;
   padding-left:30px;
 } 
- #password {
-  background: url(../../images/signin/person-fill-lock.svg) no-repeat scroll 7px 7px;
-  padding-left:30px;
-}
 
 .sign-in__input::placeholder {
   text-align: center;

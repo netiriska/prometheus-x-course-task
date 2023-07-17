@@ -11,7 +11,7 @@ export default function Signin() {
           <img className="sign-in__image" src={avatar} alt="avatar" />
           <form action="/handling-form-page" method="post">
             <div className="sign-in__form">
-              <label className="sign-in__label" for="username">
+              <label className="sign-in__label" htmlFor="username">
                 Username
               </label>
 
@@ -21,16 +21,6 @@ export default function Signin() {
                 id="username"
                 name="user_name"
                 placeholder="Username"
-              />
-            </div>
-            <div className="sign-in__form">
-              <label className="sign-in__label" for="password"></label>
-              <input
-                className="sign-in__input"
-                type="password"
-                id="password"
-                name="user_password"
-                placeholder="Password"
               />
             </div>
             <button className="sign-in__button" type="submit" name="submit">
