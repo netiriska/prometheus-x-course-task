@@ -25,6 +25,13 @@ export default function Signin() {
     }
   }, [disabled]);
 
+  const handleInputBlur = (e) => {
+    if (e.target.value === "") {
+      setIsUserTyping(false);
+      setShowErrorMessage(false);
+    }
+  };
+
   return (
     <div>
       <h1>Signin page</h1>
@@ -44,6 +51,7 @@ export default function Signin() {
                 name="user_name"
                 placeholder="Username"
                 onChange={handleChange}
+                onBlur={handleInputBlur}
               />
               {showErrorMessage && isUserTyping && (
                 <span className="input_error-message">
