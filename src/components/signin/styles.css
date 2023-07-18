@@ -1,5 +1,3 @@
-
-
 /* Спочатку очищаємо всі відступи і межі 
 * - звертаємось до абсолютно всіх тегів на сторінці */
 * {
@@ -122,6 +120,10 @@ body {
   text-align: center;
   padding: 80px 50px 150px 50px;
 }
+/* .input_error-message {
+  color: red;
+  margin-top: 5px;
+} */
 
 header {
   border-top: 2px solid #ccc;
@@ -152,12 +154,11 @@ header {
   margin: 15px 0;
   padding: 8px;
   border-radius: 5px;
-  
 }
 #username {
   background: url(../../images/signin/person-heart.svg) no-repeat scroll 7px 7px;
-  padding-left:30px;
-} 
+  padding-left: 30px;
+}
 
 .sign-in__input::placeholder {
   text-align: center;
@@ -172,7 +173,7 @@ header {
   align-self: center;
   padding: 0 8px;
   background: url(../../images/signin/unlock-fill.svg) no-repeat scroll 7px 7px;
-  padding-left:30px;
+  padding-left: 30px;
 }
 /* +++++++++++++++ */
 @media (max-width: 1200px) {
