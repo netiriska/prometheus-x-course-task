@@ -3,12 +3,10 @@ import logo from "../../images/header/bookmark-heart.svg";
 import "./styles.css";
 import { useContext } from "react";
 import UserContext from "../../context/UserContext";
+import HeaderActions from "./headerActions";
 
 export default function Header(props) {
   const user = useContext(UserContext);
-  console.log(user);
-
-  const handleLogout = () => props.setUser(null);
 
   return (
     <header>
@@ -20,8 +18,8 @@ export default function Header(props) {
           </a>
         </div>
         <div>
-          <h1>{user}</h1>
-          <button onClick={handleLogout}>LogOut</button>
+          {/* передаємо в HeaderActions функцію setUser з MyRoutes */}
+          {user && <HeaderActions setUser={props.setUser} />}
         </div>
       </div>
       <nav>
