@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Book from "../book/Book";
+import "./styles.css";
 
 export default function BookList() {
   const [books, setBooks] = useState({ books: [] });
@@ -12,8 +13,7 @@ export default function BookList() {
   console.log(books);
 
   return (
-    <div>
-      <h1>BookList page</h1>
+    <div className="books__cards">
       {books.books.map((book) => {
         return <Book key={book.id} {...book} />;
       })}
