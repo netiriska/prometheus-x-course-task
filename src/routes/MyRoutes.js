@@ -13,7 +13,7 @@ export default function MyRoutes() {
   return (
     <UserContext.Provider value={user}>
       <Routes>
-        <Route path="/" element={<Header />}>
+        <Route path="/" element={<Header setUser={setUser} />}>
           <Route path="/" element={<Signin setUser={setUser} />} />
           <Route path="/specificbook" element={<SpecificBook />} />
           <Route path="/booklist" element={<BookList />} />

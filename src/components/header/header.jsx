@@ -4,9 +4,11 @@ import "./styles.css";
 import { useContext } from "react";
 import UserContext from "../../context/UserContext";
 
-export default function Header() {
+export default function Header(props) {
   const user = useContext(UserContext);
   console.log(user);
+
+  const handleLogout = () => props.setUser(null);
 
   return (
     <header>
@@ -19,6 +21,7 @@ export default function Header() {
         </div>
         <div>
           <h1>{user}</h1>
+          <button onClick={handleLogout}>LogOut</button>
         </div>
       </div>
       <nav>
