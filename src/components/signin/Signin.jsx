@@ -5,12 +5,16 @@ import "./styles.css";
 import Footer from "../footer/footer";
 
 export default function Signin(props) {
+  // Створюємо стейт для збереження значення інпуту
+  const [usernameValue, setUsernameValue] = useState(null);
+
   const [disabled, setDisabled] = useState(true);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const [isUserTyping, setIsUserTyping] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
+    setUsernameValue(e.target.value);
     setIsUserTyping(true);
     if (e.target.value.length >= 4 && e.target.value.length <= 16) {
       setDisabled(false);
@@ -35,8 +39,8 @@ export default function Signin(props) {
   };
 
   const navigateBooklist = () => {
+    props.setUser(usernameValue);
     // 👇️ navigate to /
-    props.setUser("username");
     navigate("/booklist");
   };
 
