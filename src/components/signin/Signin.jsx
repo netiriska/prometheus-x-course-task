@@ -1,10 +1,10 @@
-import React, { useState, useEffect} from "react";
-import { useNavigate} from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import avatar from "../../images/signin/avatar.png";
 import "./styles.css";
 import Footer from "../footer/footer";
 
-export default function Signin() {
+export default function Signin(props) {
   const [disabled, setDisabled] = useState(true);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const [isUserTyping, setIsUserTyping] = useState(false);
@@ -36,7 +36,8 @@ export default function Signin() {
 
   const navigateBooklist = () => {
     // 👇️ navigate to /
-    navigate('/booklist');
+    props.setUser("username");
+    navigate("/booklist");
   };
 
   return (
