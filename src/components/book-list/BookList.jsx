@@ -1,7 +1,21 @@
+import { useEffect, useState } from "react";
+
 export default function BookList() {
+  const [books, setBooks] = useState({ books: [] });
+  useEffect(() => {
+    fetch("./books.json")
+      .then((response) => response.json())
+      .then((json) => setBooks(json));
+  }, []);
+  console.log("BookList rendered");
+  console.log(books);
+
   return (
     <div>
       <h1>BookList page</h1>
+      {books.books.map((book) => {
+        return <h1 key={book.id}>{book.title}</h1>;
+      })}
     </div>
   );
 }
