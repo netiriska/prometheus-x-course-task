@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
+import { useNavigate} from "react-router-dom";
 import avatar from "../../images/signin/avatar.png";
 import "./styles.css";
 import Footer from "../footer/footer";
@@ -7,6 +8,7 @@ export default function Signin() {
   const [disabled, setDisabled] = useState(true);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const [isUserTyping, setIsUserTyping] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setIsUserTyping(true);
@@ -32,8 +34,13 @@ export default function Signin() {
     }
   };
 
+  const navigateBooklist = () => {
+    // 👇️ navigate to /
+    navigate('/booklist');
+  };
+
   return (
-    <div>
+    <div className="auth-form-container">
       <h1>Signin page</h1>
       <div className="container">
         <div className="sign-in">
@@ -65,6 +72,7 @@ export default function Signin() {
               type="submit"
               name="submit"
               disabled={disabled}
+              onClick={navigateBooklist}
             >
               Sign-In
             </button>
