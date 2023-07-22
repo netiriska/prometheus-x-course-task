@@ -1,8 +1,13 @@
 import { Link, Outlet } from "react-router-dom";
 import logo from "../../images/header/bookmark-heart.svg";
 import "./styles.css";
+import { useContext } from "react";
+import UserContext from "../../context/UserContext";
 
 export default function Header() {
+  const user = useContext(UserContext);
+  console.log(user);
+
   return (
     <header>
       <div className="container">
@@ -11,6 +16,9 @@ export default function Header() {
             WITH LOVE
             <img src={logo} alt="" /> BOOK STORE / Khomenko Iryna
           </a>
+        </div>
+        <div>
+          <h1>{user}</h1>
         </div>
       </div>
       <nav>
