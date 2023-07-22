@@ -84,7 +84,6 @@ export default function Signin(props) {
           </form>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

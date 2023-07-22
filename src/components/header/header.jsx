@@ -4,32 +4,36 @@ import "./styles.css";
 import { useContext } from "react";
 import UserContext from "../../context/UserContext";
 import HeaderActions from "./headerActions";
+import Footer from "../footer/footer";
 
 export default function Header(props) {
   const user = useContext(UserContext);
 
   return (
-    <header>
-      <div className="container">
-        <div className="authorization">
-          <a href="/" className="main-header">
-            WITH LOVE
-            <img src={logo} alt="" /> BOOK STORE / Khomenko Iryna
-          </a>
+    <div>
+      <header>
+        <div className="container">
+          <div className="authorization">
+            <a href="/" className="main-header">
+              WITH LOVE
+              <img src={logo} alt="" /> BOOK STORE / Khomenko Iryna
+            </a>
+          </div>
+          <div>
+            {/* передаємо в HeaderActions функцію setUser з MyRoutes */}
+            {user && <HeaderActions setUser={props.setUser} />}
+          </div>
         </div>
-        <div>
-          {/* передаємо в HeaderActions функцію setUser з MyRoutes */}
-          {user && <HeaderActions setUser={props.setUser} />}
-        </div>
-      </div>
-      <nav>
-        <div>
-          <Link to="/">Signin</Link>
-          <Link to="/specificbook">SpecificBook</Link>
-          <Link to="/booklist">BookList</Link>
-        </div>
-      </nav>
+        <nav>
+          <div>
+            <Link to="/">Signin</Link>
+            <Link to="/specificbook">SpecificBook</Link>
+            <Link to="/booklist">BookList</Link>
+          </div>
+        </nav>
+      </header>
       <Outlet />
-    </header>
+      <Footer />
+    </div>
   );
 }
