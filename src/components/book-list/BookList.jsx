@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Book from "../book/Book";
 
 export default function BookList() {
   const [books, setBooks] = useState({ books: [] });
@@ -14,7 +15,7 @@ export default function BookList() {
     <div>
       <h1>BookList page</h1>
       {books.books.map((book) => {
-        return <h1 key={book.id}>{book.title}</h1>;
+        return <Book key={book.id} {...book} />;
       })}
     </div>
   );
