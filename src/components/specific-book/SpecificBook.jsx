@@ -1,10 +1,19 @@
 import CurrentBookContext from "../../context/CurrentBookContext";
 import "./styles.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 export default function SpecificBook() {
   const currentBook = useContext(CurrentBookContext);
   console.log(currentBook);
+
+  const [quantity, setQuantity] = useState(1); // Встановлюємо початкове значення 1
+
+  const handleQuantityChange = (event) => {
+    const newQuantity = parseInt(event.target.value, 10);
+    setQuantity(newQuantity);
+  };
+
+  const totalPrice = (currentBook.price * quantity).toFixed(2);
 
   return (
     <div>
@@ -46,12 +55,19 @@ export default function SpecificBook() {
                   <form action="/">
                     <div className="choice">
                       <label htmlFor="quantity">Count</label>
-                      <input type="number" id="quantity" min="1" max="42" />
+                      <input
+                        type="number"
+                        id="quantity"
+                        min="1"
+                        max="42"
+                        value={quantity}
+                        onChange={handleQuantityChange}
+                      />
                     </div>
                   </form>
                   <div className="totalPrice">
                     <div>Total price</div>
-                    <p id="totalPrice">0.00</p>
+                    <p id="totalPrice">{totalPrice}</p>
                   </div>
                   <button type="submit">Add to cart</button>
                 </div>
