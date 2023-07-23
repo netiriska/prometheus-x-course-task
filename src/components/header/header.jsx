@@ -27,8 +27,8 @@ export default function Header(props) {
         <nav>
           <div>
             <Link to="/">Signin</Link>
-            <Link to="/specificbook">SpecificBook</Link>
             <Link to="/booklist">BookList</Link>
+            <Link to="/cart">Cart</Link>
           </div>
         </nav>
       </header>
