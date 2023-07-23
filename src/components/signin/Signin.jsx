@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import avatar from "../../images/signin/avatar.png";
 import "./styles.css";
-import Footer from "../footer/footer";
 
 export default function Signin(props) {
   // Створюємо стейт для збереження значення інпуту
