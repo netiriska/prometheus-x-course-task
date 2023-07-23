@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import UserContext from "../context/UserContext";
 import BooksContext from "../context/BooksContext";
 import CurrentBookContext from "../context/CurrentBookContext";
+import Cart from "../components/cart/cart";
 
 export default function MyRoutes() {
   const [user, setUser] = useState(null);
@@ -50,6 +51,14 @@ export default function MyRoutes() {
                 element={
                   <ProtectedRoute user={user}>
                     <BookList setCurrentBook={setCurrentBook} />
+                  </ProtectedRoute>
+                }
+              ></Route>
+              <Route
+                path="/cart"
+                element={
+                  <ProtectedRoute user={user}>
+                    <Cart />
                   </ProtectedRoute>
                 }
               ></Route>
