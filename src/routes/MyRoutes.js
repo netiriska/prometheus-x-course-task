@@ -9,6 +9,7 @@ import UserContext from "../context/UserContext";
 import BooksContext from "../context/BooksContext";
 import CurrentBookContext from "../context/CurrentBookContext";
 import Cart from "../components/cart/cart";
+import SelectedBooksContext from "../context/SelectedBooksContext";
 
 export default function MyRoutes() {
   const [user, setUser] = useState(null);
@@ -20,6 +21,7 @@ export default function MyRoutes() {
       .then((json) => setBooks(json));
   }, []);
 
+  const [selectedBooks, setSelectedBooks] = useState([]);
   const [currentBook, setCurrentBook] = useState(null);
 
   // https://www.robinwieruch.de/react-router-private-routes/
@@ -35,36 +37,38 @@ export default function MyRoutes() {
     <UserContext.Provider value={user}>
       <BooksContext.Provider value={books}>
         <CurrentBookContext.Provider value={currentBook}>
-          <Routes>
-            <Route path="/" element={<Header setUser={setUser} />}>
-              <Route path="/" element={<Signin setUser={setUser} />} />
-              <Route
-                path="/specificbook"
-                element={
-                  <ProtectedRoute user={user}>
-                    <SpecificBook />
-                  </ProtectedRoute>
-                }
-              ></Route>
-              <Route
-                path="/booklist"
-                element={
-                  <ProtectedRoute user={user}>
-                    <BookList setCurrentBook={setCurrentBook} />
-                  </ProtectedRoute>
-                }
-              ></Route>
-              <Route
-                path="/cart"
-                element={
-                  <ProtectedRoute user={user}>
-                    <Cart />
-                  </ProtectedRoute>
-                }
-              ></Route>
-              <Route path="*" element={<PageNotFound />} />
-            </Route>
-          </Routes>
+          <SelectedBooksContext.Provider value={selectedBooks}>
+            <Routes>
+              <Route path="/" element={<Header setUser={setUser} />}>
+                <Route path="/" element={<Signin setUser={setUser} />} />
+                <Route
+                  path="/specificbook"
+                  element={
+                    <ProtectedRoute user={user}>
+                      <SpecificBook setSelectedBooks={setSelectedBooks} />
+                    </ProtectedRoute>
+                  }
+                ></Route>
+                <Route
+                  path="/booklist"
+                  element={
+                    <ProtectedRoute user={user}>
+                      <BookList setCurrentBook={setCurrentBook} />
+                    </ProtectedRoute>
+                  }
+                ></Route>
+                <Route
+                  path="/cart"
+                  element={
+                    <ProtectedRoute user={user}>
+                      <Cart />
+                    </ProtectedRoute>
+                  }
+                ></Route>
+                <Route path="*" element={<PageNotFound />} />
+              </Route>
+            </Routes>
+          </SelectedBooksContext.Provider>
         </CurrentBookContext.Provider>
       </BooksContext.Provider>
     </UserContext.Provider>
