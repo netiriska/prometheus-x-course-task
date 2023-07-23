@@ -4,7 +4,12 @@ export default function Footer() {
   return (
     <footer>
       <p className="footerText">
-        Виконано в<a href="https://prometheus.org.ua/"> Prometheus </a>© 2023
+        Виконано в
+        <a href="https://prometheus.org.ua/" target="_blank">
+          {" "}
+          Prometheus{" "}
+        </a>
+        © 2023
       </p>
     </footer>
   );
