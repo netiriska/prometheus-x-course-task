@@ -1,25 +1,10 @@
-/* @media (max-width: 1200px) {
-  .books__cards {
-    max-width: 970px;
-  }
-}
-@media (max-width: 992px) {
-  .books__cards {
-    max-width: 750px;
-  }
-}
-@media (max-width: 767px) {
-  .books__cards {
-    max-width: none;
-  }
-} */
-
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .books__container {
   /* sticky footer */
+  /*  https://www.youtube.com/watch?v=pggIVY5eOGM*/
   min-height: 100vh;
   display: flex;
   flex-direction: column;
