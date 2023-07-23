@@ -1,14 +1,10 @@
-import { useEffect, useState } from "react";
 import Book from "../book/Book";
 import "./styles.css";
+import { useContext } from "react";
+import BooksContext from "../../context/BooksContext";
 
 export default function BookList() {
-  const [books, setBooks] = useState({ books: [] });
-  useEffect(() => {
-    fetch("./books.json")
-      .then((response) => response.json())
-      .then((json) => setBooks(json));
-  }, []);
+  const books = useContext(BooksContext);
   console.log("BookList rendered");
   console.log(books);
 

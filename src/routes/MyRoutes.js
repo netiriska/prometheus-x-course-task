@@ -4,11 +4,20 @@ import BookList from "../components/book-list/BookList";
 import SpecificBook from "../components/specific-book/SpecificBook";
 import Header from "../components/header/header";
 import PageNotFound from "../components/page-not-found/PageNotFound";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import UserContext from "../context/UserContext";
+import BooksContext from "../context/BooksContext";
 
 export default function MyRoutes() {
   const [user, setUser] = useState(null);
+
+  const [books, setBooks] = useState({ books: [] });
+  useEffect(() => {
+    fetch("./books.json")
+      .then((response) => response.json())
+      .then((json) => setBooks(json));
+  }, []);
+
   // https://www.robinwieruch.de/react-router-private-routes/
   const ProtectedRoute = ({ user, redirectPath = "/", children }) => {
     if (!user) {
@@ -20,28 +29,30 @@ export default function MyRoutes() {
 
   return (
     <UserContext.Provider value={user}>
-      <Routes>
-        <Route path="/" element={<Header setUser={setUser} />}>
-          <Route path="/" element={<Signin setUser={setUser} />} />
-          <Route
-            path="/specificbook"
-            element={
-              <ProtectedRoute user={user}>
-                <SpecificBook />
-              </ProtectedRoute>
-            }
-          ></Route>
-          <Route
-            path="/booklist"
-            element={
-              <ProtectedRoute user={user}>
-                <BookList />
-              </ProtectedRoute>
-            }
-          ></Route>
-          <Route path="*" element={<PageNotFound />} />
-        </Route>
-      </Routes>
+      <BooksContext.Provider value={books}>
+        <Routes>
+          <Route path="/" element={<Header setUser={setUser} />}>
+            <Route path="/" element={<Signin setUser={setUser} />} />
+            <Route
+              path="/specificbook"
+              element={
+                <ProtectedRoute user={user}>
+                  <SpecificBook />
+                </ProtectedRoute>
+              }
+            ></Route>
+            <Route
+              path="/booklist"
+              element={
+                <ProtectedRoute user={user}>
+                  <BookList />
+                </ProtectedRoute>
+              }
+            ></Route>
+            <Route path="*" element={<PageNotFound />} />
+          </Route>
+        </Routes>
+      </BooksContext.Provider>
     </UserContext.Provider>
   );
 }
