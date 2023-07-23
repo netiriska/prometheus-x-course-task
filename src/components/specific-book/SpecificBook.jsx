@@ -1,5 +1,4 @@
 import "./styles.css";
-import Book from "../book/Book";
 
 export default function SpecificBook(props) {
   return (
