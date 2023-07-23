@@ -2,7 +2,7 @@ import CurrentBookContext from "../../context/CurrentBookContext";
 import "./styles.css";
 import { useContext } from "react";
 
-export default function SpecificBook(props) {
+export default function SpecificBook() {
   const currentBook = useContext(CurrentBookContext);
   console.log(currentBook);
 
@@ -16,29 +16,32 @@ export default function SpecificBook(props) {
               <div className="bookinfo">
                 <div className="specific-book__column specific-book__image">
                   <img
-                    src={props.image}
+                    src={currentBook.image}
                     alt="JavaScript: The Definitive Guide, 7th Edition book"
                   />
                 </div>
                 <div className="specific-book__column specific-book__info">
                   <p>
-                    <strong>Book name: </strong>JavaScript: The Definitive
-                    Guide, 7th Edition
+                    <strong>Book name: </strong>
+                    {currentBook.title}
                   </p>
                   <p>
-                    <strong>Book author: </strong>David Flanagan
+                    <strong>Book author: </strong>
+                    {currentBook.author}
                   </p>
                   <p>
-                    <strong>Book level: </strong>Beginner
+                    <strong>Book level: </strong>
+                    {currentBook.level}
                   </p>
                   <p>
-                    <strong>Book tags: </strong>core
+                    <strong>Book tags: </strong>
+                    {currentBook.tags}
                   </p>
                 </div>
                 <div className="specific-book__column specific-book__calculation">
                   <div className="price">
                     <p>Price</p>
-                    <p id="pricePerBook">$52.72</p>
+                    <p id="pricePerBook">{currentBook.price}</p>
                   </div>
                   <form action="/">
                     <div className="choice">
@@ -56,9 +59,8 @@ export default function SpecificBook(props) {
               <div className="bookview">
                 <div className="specific-book__column specific-book__description">
                   <p>
-                    <strong>Description: </strong>JavaScript is the programming
-                    language of the web and is used by more software developers
-                    today than any other programming language.
+                    <strong>Description: </strong>
+                    {currentBook.description}
                   </p>
                 </div>
               </div>
