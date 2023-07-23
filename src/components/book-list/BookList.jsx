@@ -25,6 +25,15 @@ export default function BookList() {
             Search
           </button>
         </form>
+        <select className="select__container" name="Price">
+          <option value="" disabled selected hidden>
+            Price
+          </option>
+          <option value="all">All</option>
+          <option value="Up to 15">Up to 15</option>
+          <option value="From 15 to 30">From 15 to 30</option>
+          <option value="More than 30">More than 30</option>
+        </select>
       </div>
       <div className="books__cards">
         {books.books.map((book) => {
