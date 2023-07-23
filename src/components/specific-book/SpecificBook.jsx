@@ -18,7 +18,7 @@ export default function SpecificBook(props) {
   };
 
   const addToCart = () => {
-    console.log("button click");
+    currentBook.quantity = quantity;
     selectedBooks.push(currentBook);
   };
 
@@ -33,10 +33,7 @@ export default function SpecificBook(props) {
             <div className="container">
               <div className="bookinfo">
                 <div className="specific-book__column specific-book__image">
-                  <img
-                    src={currentBook.image}
-                    alt="JavaScript: The Definitive Guide, 7th Edition book"
-                  />
+                  <img src={currentBook.image} alt="Book image" />
                 </div>
                 <div className="specific-book__column specific-book__info">
                   <p>
