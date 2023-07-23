@@ -1,10 +1,45 @@
+/* @media (max-width: 1200px) {
+  .books__cards {
+    max-width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  .books__cards {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767px) {
+  .books__cards {
+    max-width: none;
+  }
+} */
+
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
 .books__cards {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
+  width: 75%;
+  text-align: center;
+  align-items: center;
+  border: 1px solid red;
+  /* To center the element horizontally */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .book {
-  width: calc(100% / 3);
+  width: calc(75% / 3);
   text-align: center;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  margin: 15px;
+}
+
+.book > img {
+  border-radius: 10px;
 }
