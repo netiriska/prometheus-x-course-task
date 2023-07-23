@@ -56,6 +56,10 @@ body {
   border-color: #1183d6;
   outline: none;
 }
+.select__container {
+  border: 1px solid #000;
+  width: 200px;
+}
 
 .books__container {
   /* sticky footer */
