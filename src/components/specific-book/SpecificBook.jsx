@@ -1,6 +1,11 @@
+import CurrentBookContext from "../../context/CurrentBookContext";
 import "./styles.css";
+import { useContext } from "react";
 
 export default function SpecificBook(props) {
+  const currentBook = useContext(CurrentBookContext);
+  console.log(currentBook);
+
   return (
     <div>
       <h1>SpecificBook page</h1>
@@ -37,7 +42,7 @@ export default function SpecificBook(props) {
                   </div>
                   <form action="/">
                     <div className="choice">
-                      <label for="quantity">Count</label>
+                      <label htmlFor="quantity">Count</label>
                       <input type="number" id="quantity" min="1" max="42" />
                     </div>
                   </form>

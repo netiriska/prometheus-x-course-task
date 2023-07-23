@@ -3,10 +3,10 @@ import "./styles.css";
 import { useContext } from "react";
 import BooksContext from "../../context/BooksContext";
 
-export default function BookList() {
+export default function BookList(props) {
   const books = useContext(BooksContext);
-  console.log("BookList rendered");
-  console.log(books);
+  // console.log("BookList rendered");
+  // console.log(books);
 
   return (
     <div className="books__container">
@@ -22,7 +22,7 @@ export default function BookList() {
           </button>
         </form>
         <select className="select__container" name="Price">
-          <option value="" disabled selected hidden>
+          <option value="" disabled hidden>
             Price
           </option>
           <option value="all">All</option>
@@ -33,7 +33,13 @@ export default function BookList() {
       </div>
       <div className="books__cards">
         {books.books.map((book) => {
-          return <Book key={book.id} {...book} />;
+          return (
+            <Book
+              key={book.id}
+              book={book}
+              setCurrentBook={props.setCurrentBook}
+            />
+          );
         })}
       </div>
     </div>
