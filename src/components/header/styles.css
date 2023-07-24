@@ -24,6 +24,7 @@
 .headerActions__cart {
   width: 40px;
   margin-right: 10px;
+  background: transparent;
 }
 
 .headerActions__button {
