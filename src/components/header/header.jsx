@@ -12,11 +12,15 @@ export default function Header(props) {
   return (
     <div>
       <header>
-        <div className="container">
+        <div className="authorization__container">
           <div className="authorization">
             <a href="/" className="main-header">
               WITH LOVE
-              <img src={logo} alt="" /> BOOK STORE / Khomenko Iryna
+              {/* span - однаковий відступ до тексту від icon */}
+              <span>
+                <img src={logo} alt="" />
+              </span>
+              BOOK STORE / Khomenko Iryna
             </a>
           </div>
           <div>
