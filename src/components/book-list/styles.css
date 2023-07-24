@@ -105,11 +105,11 @@ body {
 }
 
 .search__form {
-  color: #555;
+  color: #610f91;
   display: flex;
   padding: 2px;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 0 0 30px;
   width: 250px;
   height: 38px;
@@ -128,7 +128,7 @@ body {
 }
 
 .search__input[type="search"]::placeholder {
-  color: #bbb;
+  color: #9880af;
 }
 
 .search__button[type="submit"] {
@@ -163,26 +163,14 @@ body {
   border-radius: 10px;
   height: 38px;
   overflow: hidden;
-}
-/* .select__container::before,
-.select__container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 10px;
-  height: 10px;
-  border: 1px solid #000;
-  background-color: white;
-  border-radius: 10px;
+  justify-content: center;
 }
 
-.select__container::before {
-  left: 0;
+.select__container select {
+  color: #481088;
+  font-size: 15px;
+  font-weight: bold;
 }
-
-.select__container::after {
-  right: 0;
-} */
 
 .books__container {
   /* sticky footer */

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import UserContext from "../../context/UserContext";
 import cart from "../../images/header/cart.svg";
 import avatar from "../../images/signin/icon-username.png";
+import heartUkraine from "../../images/header/ukraine_heart_sticker.png";
 
 export default function HeaderActions(props) {
   const handleLogout = () => props.setUser(null);
@@ -17,6 +18,7 @@ export default function HeaderActions(props) {
       <button className="headerActions__button" onClick={handleLogout}>
         Sign-Out
       </button>
+      <img src={heartUkraine} alt="heart" />
       <img
         className="headerActions__avatar"
         src={avatar}
