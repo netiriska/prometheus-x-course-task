@@ -75,7 +75,14 @@ export default function SpecificBook(props) {
                     <div>Total price</div>
                     <p id="totalPrice">{totalPrice}</p>
                   </div>
-                  <button onClick={addToCart}>Add to cart</button>
+                  <div className="specific-book__button">
+                    <button
+                      className="specific-book__add_button"
+                      onClick={addToCart}
+                    >
+                      Add to cart
+                    </button>
+                  </div>
                 </div>
               </div>
               <div className="bookview">

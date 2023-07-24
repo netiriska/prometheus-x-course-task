@@ -145,11 +145,42 @@ body {
   height: 200px;
   flex-basis: 300px;
 }
+
+.specific-book__button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.specific-book__add_button {
+  padding: 0.7em 2em;
+  font-weight: bold;
+  height: 40px;
+  transition: 0.5s;
+  background-size: 200%;
+  background-image: linear-gradient(
+    to right,
+    #c0f546 0%,
+    #72d654 51%,
+    #9d81c2 100%
+  );
+  /* background-color: rgb(144, 247, 10); */
+  border-radius: 10px;
+  box-shadow: 0 0 10px #461d94;
+  background-position: right bottom;
+  color: #250958;
+}
+
+.specific-book__add_button:hover {
+  color: white;
+  background-position: left center;
+}
+
 .price,
 .totalPrice,
 .choice {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .choice input {
