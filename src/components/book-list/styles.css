@@ -193,6 +193,7 @@ body {
   /* To center the element horizontally */
   margin-left: auto;
   margin-right: auto;
+  color: #250958;
 }
 
 .book {
@@ -212,4 +213,40 @@ body {
   width: 250px;
   height: 328px;
   border: 2px solid green;
+  object-fit: cover; /*https://stackoverflow.com/questions/11757537/css-image-size-how-to-fill-but-not-stretch*/
+}
+.book__price_view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book__price {
+  padding: 5px 5px;
+  color: #250958;
+  font-weight: bold;
+}
+.book__button {
+  margin: 10px;
+  margin-right: 10px;
+  padding: 0.7em 2em;
+  font-weight: bold;
+  transition: 0.5s;
+  background-size: 200%;
+  background-image: linear-gradient(
+    to right,
+    #c0f546 0%,
+    #72d654 51%,
+    #9d81c2 100%
+  );
+  /* background-color: rgb(144, 247, 10); */
+  border-radius: 10px;
+  box-shadow: 0 0 10px #461d94;
+  background-position: right bottom;
+  color: #250958;
+}
+
+.book__button:hover {
+  color: white;
+  background-position: left center;
 }

@@ -16,11 +16,6 @@ export default function Book(props) {
   };
   return (
     <article className="book">
-      <p className="book__author">
-        <strong>Book author: </strong>
-        {props.book.author}
-      </p>
-      <p className="book__price">{props.book.price}</p>
       <img
         className="book__image"
         src={props.book.image}
@@ -31,9 +26,16 @@ export default function Book(props) {
         <strong>Book name: </strong>
         {props.book.title}
       </p>
-      <button className="book__button" onClick={navigateBook}>
-        View
-      </button>
+      <p className="book__author">
+        <strong>Book author: </strong>
+        {props.book.author}
+      </p>
+      <div className="book__price_view">
+        <p className="book__price">{props.book.price}</p>
+        <button className="book__button" onClick={navigateBook}>
+          View
+        </button>
+      </div>
     </article>
   );
 }
