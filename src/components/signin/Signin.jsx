@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import avatar from "../../images/signin/avatar.png";
+import avatar from "../../images/signin/icon-username.png";
 import "./styles.css";
 
 export default function Signin(props) {
