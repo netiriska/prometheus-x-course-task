@@ -1,7 +1,15 @@
-.container {
+.authorization__container {
   margin: 0px auto;
   border: 1px solid #c41111;
   padding: 25px 10px 25px 10px;
+  /* headerActions items in right side */
+  display: flex;
+}
+
+.headerActions__container {
+  /* align headerActions items in line */
+  display: flex;
+  align-items: center;
 }
 
 .authorization {

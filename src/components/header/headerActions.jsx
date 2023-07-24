@@ -10,13 +10,20 @@ export default function HeaderActions(props) {
   console.log(user);
 
   return (
-    <div>
-      <a className="" href="">
+    <div className="headerActions__container">
+      <a className="headerActions__cart" href="">
         <img src={cart} alt="cart" width="40px" />
       </a>
-      <button onClick={handleLogout}>LogOut</button>
-      <img src={avatar} alt="avatar" width="40px" />
-      <h1>{user}</h1>
+      <button className="headerActions__button" onClick={handleLogout}>
+        LogOut
+      </button>
+      <img
+        className="headerActions__avatar"
+        src={avatar}
+        alt="avatar"
+        width="40px"
+      />
+      <p className="headerActions__user">{user}</p>
     </div>
   );
 }
