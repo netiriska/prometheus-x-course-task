@@ -15,7 +15,7 @@ export default function HeaderActions(props) {
         <img src={cart} alt="cart" width="40px" />
       </a>
       <button className="headerActions__button" onClick={handleLogout}>
-        LogOut
+        Sign-Out
       </button>
       <img
         className="headerActions__avatar"
