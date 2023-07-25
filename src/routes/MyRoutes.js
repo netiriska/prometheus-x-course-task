@@ -10,6 +10,7 @@ import BooksContext from "../context/BooksContext";
 import CurrentBookContext from "../context/CurrentBookContext";
 import Cart from "../components/cart/cart";
 import SelectedBooksContext from "../context/SelectedBooksContext";
+import PurchasedBooks from "../components/purchasedBooks/purchasedBooks";
 
 export default function MyRoutes() {
   const [user, setUser] = useState(null);
@@ -62,6 +63,14 @@ export default function MyRoutes() {
                   element={
                     <ProtectedRoute user={user}>
                       <Cart />
+                    </ProtectedRoute>
+                  }
+                ></Route>
+                <Route
+                  path="/purchasedbooks"
+                  element={
+                    <ProtectedRoute user={user}>
+                      <PurchasedBooks setSelectedBooks={setSelectedBooks} />
                     </ProtectedRoute>
                   }
                 ></Route>
