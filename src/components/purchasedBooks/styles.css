@@ -20,3 +20,13 @@
 .purchase__table td:nth-child(1) {
   width: 500px;
 }
+
+.purchase__delete-button {
+  /* padding: 2px; */
+  border: none;
+}
+
+.purchase__delete-button:hover {
+  color: #250958;
+  transform: scale(1.3);
+}
