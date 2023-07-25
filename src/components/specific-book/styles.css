@@ -152,9 +152,10 @@ body {
 }
 
 .specific-book__add_button {
-  padding: 0.7em 2em;
+  padding: 0.7em 1.7em;
   font-weight: bold;
-  height: 40px;
+  height: 35px;
+  font-size: 15px;
   transition: 0.5s;
   background-size: 200%;
   background-image: linear-gradient(

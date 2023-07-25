@@ -228,8 +228,9 @@ body {
 }
 .book__button {
   margin: 10px;
-  padding: 0.7em 2em;
-  height: 40px;
+  padding: 0.5em 1.5em;
+  height: 35px;
+  font-size: 15px;
   font-weight: bold;
   transition: 0.5s;
   background-size: 200%;

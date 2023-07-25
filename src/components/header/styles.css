@@ -29,8 +29,9 @@
 
 .headerActions__button {
   margin-right: 10px; /*відстань між items headerActions*/
-  padding: 10px 20px;
-  height: 40px;
+  padding: 0.7em 1.7em;
+  height: 35px;
+  font-size: 15px;
   font-weight: bold;
   transition: 0.5s;
   background-size: 200%;
