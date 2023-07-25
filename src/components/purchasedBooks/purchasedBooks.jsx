@@ -5,6 +5,7 @@ import { RiDeleteBin2Line } from "react-icons/ri";
 
 export default function PurchasedBooks() {
   const selectedBooks = useContext(SelectedBooksContext);
+
   return (
     <div className="purchase__table-container">
       <div className="purchase__table">
