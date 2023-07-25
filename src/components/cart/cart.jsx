@@ -4,9 +4,13 @@ import { useContext } from "react";
 import SelectedBooksContext from "../../context/SelectedBooksContext";
 import PurchasedBooks from "../purchasedBooks/purchasedBooks";
 
-export default function Cart() {
+export default function Cart(props) {
   const selectedBooks = useContext(SelectedBooksContext);
   console.log(selectedBooks);
+
+  const purchaseBooks = () => {
+    props.setSelectedBooks([]);
+  };
 
   if (selectedBooks.length === 0) {
     // Показуємо пустий кошик, якщо обрані книги відсутні
@@ -22,6 +26,15 @@ export default function Cart() {
       </div>
     );
   } else {
-    return <PurchasedBooks />;
+    return (
+      <div className="cart__empty_purchase">
+        <div className="cart__purchase_button_container">
+          <button className="cart__purchase_button" onClick={purchaseBooks}>
+            Purchase
+          </button>
+        </div>
+        <PurchasedBooks />
+      </div>
+    );
   }
 }
