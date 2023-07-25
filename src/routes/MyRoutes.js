@@ -66,14 +66,6 @@ export default function MyRoutes() {
                     </ProtectedRoute>
                   }
                 ></Route>
-                <Route
-                  path="/purchasedbooks"
-                  element={
-                    <ProtectedRoute user={user}>
-                      <PurchasedBooks setSelectedBooks={setSelectedBooks} />
-                    </ProtectedRoute>
-                  }
-                ></Route>
                 <Route path="*" element={<PageNotFound />} />
               </Route>
             </Routes>

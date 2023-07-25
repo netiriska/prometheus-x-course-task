@@ -33,7 +33,6 @@ export default function Header(props) {
             <Link to="/">Signin</Link>
             <Link to="/booklist">BookList</Link>
             <Link to="/cart">Cart</Link>
-            <Link to="/purchasedbooks">PurchasedBooks</Link>
           </div>
         </nav>
       </header>

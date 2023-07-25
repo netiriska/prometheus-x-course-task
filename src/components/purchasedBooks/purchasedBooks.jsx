@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import SelectedBooksContext from "../../context/SelectedBooksContext";
 import "./styles.css";
+import { RiDeleteBin2Line } from "react-icons/ri";
 
 export default function PurchasedBooks() {
   const selectedBooks = useContext(SelectedBooksContext);
@@ -25,7 +26,9 @@ export default function PurchasedBooks() {
                 <td>{book.quantity}</td>
                 <td>{book.totalPrice}</td>
                 <td>
-                  <button>Delete</button>
+                  <button className="purchase__delete-button">
+                    <RiDeleteBin2Line />
+                  </button>
                 </td>
               </tr>
             ))}
