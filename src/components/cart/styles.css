@@ -1,3 +1,49 @@
+.cart__empty_purchase {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
 .cart__image {
   width: 150px;
+}
+
+.cart__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart__purchase_button {
+  position: absolute;
+  top: 10px; /* Розташовуємо кнопку зверху від контейнера */
+  right: 10px; /* Розташовуємо кнопку праворуч від контейнера */
+  margin: 20px;
+  padding: 0.7em 1.7em;
+  font-weight: bold;
+  height: 35px;
+  font-size: 15px;
+  transition: 0.5s;
+  background-size: 200%;
+  background-image: linear-gradient(
+    to right,
+    #c0f546 0%,
+    #72d654 51%,
+    #9d81c2 100%
+  );
+  /* background-color: rgb(144, 247, 10); */
+  border-radius: 10px;
+  box-shadow: 0 0 10px #461d94;
+  background-position: right bottom;
+  color: #250958;
+}
+
+.cart__purchase_button:hover {
+  color: white;
+  background-position: left center;
 }
