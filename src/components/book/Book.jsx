@@ -14,6 +14,7 @@ export default function Book(props) {
     e.currentTarget.src = imageNotFound;
     e.currentTarget.classList.add("image__not_found");
   };
+
   return (
     <article className="book">
       <img
