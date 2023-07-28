@@ -25,7 +25,7 @@ export default function SpecificBook(props) {
     selectedBooks.push(book);
   };
 
-  const totalPrice = (currentBook.price * quantity).toFixed(2);
+  const totalPrice = parseFloat((currentBook.price * quantity).toFixed(2));
 
   return (
     <div>
