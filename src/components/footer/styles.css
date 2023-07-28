@@ -6,4 +6,6 @@ footer {
 
 .footerText {
   text-align: center;
+  padding: 20px;
+  font-size: 0.9vw;
 }
