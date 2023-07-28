@@ -1,8 +1,8 @@
-import cart from "../../images/header/cart.svg";
 import "./styles.css";
 import { useContext } from "react";
 import SelectedBooksContext from "../../context/SelectedBooksContext";
 import PurchasedBooks from "../purchasedBooks/purchasedBooks";
+import EmptyCart from "../empty-cart/EmptyCart";
 
 export default function Cart(props) {
   const selectedBooks = useContext(SelectedBooksContext);
@@ -19,10 +19,7 @@ export default function Cart(props) {
         <div className="cart__purchase_button_container">
           <button className="cart__purchase_button">Purchase</button>
         </div>
-        <div className="cart__empty">
-          <img className="cart__image" src={cart} alt="cart" />
-          <p>Cart empty...</p>
-        </div>
+        <EmptyCart />
       </div>
     );
   } else {
