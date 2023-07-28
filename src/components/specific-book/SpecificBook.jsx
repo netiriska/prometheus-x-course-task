@@ -18,7 +18,10 @@ export default function SpecificBook(props) {
   };
 
   const addToCart = () => {
-    let book = Object.assign({}, currentBook, { quantity: quantity });
+    let book = Object.assign({}, currentBook, {
+      quantity: quantity,
+      totalPrice: totalPrice,
+    });
     selectedBooks.push(book);
   };
 

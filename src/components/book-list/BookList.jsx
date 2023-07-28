@@ -5,7 +5,7 @@ import BooksContext from "../../context/BooksContext";
 
 export default function BookList(props) {
   const books = useContext(BooksContext);
-  const [selectedPrice, setSelectedPrice] = useState(null);
+  const [selectedPrice, setSelectedPrice] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
 
   // https://marketsplash.com/tutorials/react-js/search-filter-in-react-js/
@@ -68,7 +68,6 @@ export default function BookList(props) {
         <div className="select__container">
           <select
             name="Price"
-            defaultValue=""
             value={selectedPrice}
             onChange={(e) => setSelectedPrice(e.target.value)}
           >
