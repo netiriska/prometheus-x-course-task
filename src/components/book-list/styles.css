@@ -240,8 +240,7 @@ body {
 }
 
 .book_short-info {
-  /* resize text  depend on screen width*/
-  font-size: 0.9vw;
+  font-size: 0.9vw; /* resize text  depend on screen width*/
 }
 
 .book__price_view {
@@ -260,7 +259,8 @@ body {
   margin: 10px;
   padding: 0.5em 1.5em;
   height: 35px;
-  font-size: 15px;
+  font-size: 0.9em; /*resize button on screen width */
+  text-align: center;
   font-weight: bold;
   transition: 0.5s;
   background-size: 200%;
