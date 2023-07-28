@@ -87,6 +87,22 @@ h6 {
 }
 /*-------------------------  */
 
+@media (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: none;
+  }
+}
+/*=============================== */
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
@@ -221,6 +237,11 @@ body {
   height: 328px;
   border: 2px solid green;
   object-fit: cover; /*https://stackoverflow.com/questions/11757537/css-image-size-how-to-fill-but-not-stretch*/
+}
+
+.book_short-info {
+  /* resize text  depend on screen width*/
+  font-size: 0.9vw;
 }
 
 .book__price_view {
