@@ -23,19 +23,21 @@ export default function Book(props) {
         alt="book image"
         onError={onErrorHandler}
       />
-      <p className="book__title">
-        <strong>Book name: </strong>
-        {props.book.title}
-      </p>
-      <p className="book__author">
-        <strong>Book author: </strong>
-        {props.book.author}
-      </p>
-      <div className="book__price_view">
-        <p className="book__price">{props.book.price}</p>
-        <button className="book__button" onClick={navigateBook}>
-          View
-        </button>
+      <div className="book_short-info">
+        <p className="book__title">
+          <strong>Book name: </strong>
+          {props.book.title}
+        </p>
+        <p className="book__author">
+          <strong>Book author: </strong>
+          {props.book.author}
+        </p>
+        <div className="book__price_view">
+          <p className="book__price">{props.book.price}</p>
+          <button className="book__button" onClick={navigateBook}>
+            View
+          </button>
+        </div>
       </div>
     </article>
   );
