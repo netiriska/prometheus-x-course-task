@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import SelectedBooksContext from "../../context/SelectedBooksContext";
 import "./styles.css";
 import { RiDeleteBin2Line } from "react-icons/ri";
+import EmptyCart from "../empty-cart/EmptyCart";
 
 export default function PurchasedBooks() {
   const selectedBooks = useContext(SelectedBooksContext);
@@ -70,7 +71,7 @@ export default function PurchasedBooks() {
           </table>
         </div>
       ) : (
-        <div>Немає рядків для відображення.</div>
+        <EmptyCart />
       )}
     </div>
   );
