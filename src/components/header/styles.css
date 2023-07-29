@@ -39,26 +39,19 @@
   margin-right: 10px; /*відстань між items headerActions*/
   padding: 0.7em 1.7em;
   height: 35px;
-  font-size: 15px;
+  font-size: 1.2rem;
   font-weight: bold;
+  background-color: #7041c7;
   transition: 0.5s;
-  background-size: 200%;
-  background-image: linear-gradient(
-    to right,
-    #c0f546 0%,
-    #72d654 51%,
-    #7a3ccb 100%
-  );
-  /* background-color: rgb(144, 247, 10); */
   border-radius: 10px;
-  box-shadow: 0 0 10px #461d94;
-  background-position: right bottom;
   color: #c0f546;
+  text-align: center;
+  height: auto;
 }
 
 .headerActions__button:hover {
   color: white;
-  background-position: left center;
+  box-shadow: 0 0 10px #461d94;
 }
 
 .headerActions__avatar {

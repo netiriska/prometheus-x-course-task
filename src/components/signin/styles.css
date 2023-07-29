@@ -152,7 +152,7 @@ header {
   box-sizing: border-box;
   border: 1px solid #000;
   margin: 15px 0;
-  padding: 8px;
+  padding: 0.5em 1.7em;
   border-radius: 5px;
 }
 #username {
@@ -171,16 +171,15 @@ header {
 .sign-in__button {
   position: relative;
   width: 200px;
-  height: 35px;
-  font-size: 15px;
+  height: auto;
+  font-size: 1.2rem;
   border-radius: 5px;
   border: 1px solid #827c7c;
   font-weight: bold;
   align-self: center;
-  padding: 0 8px;
+  padding: 0.5em 1.7em;
   background: url(../../images/signin/unlock-fill.svg) no-repeat scroll 7px 7px;
   background-color: #7041c7;
-  padding-left: 30px;
   transition: 0.5s;
   color: #c0f546;
 }
