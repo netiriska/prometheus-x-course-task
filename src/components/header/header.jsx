@@ -14,27 +14,22 @@ export default function Header(props) {
       <header>
         <div className="authorization__container">
           <div className="authorization">
-            <a href="/" className="main-header">
-              WITH LOVE
-              {/* span - однаковий відступ до тексту від icon */}
-              <span>
-                <img src={logo} alt="" />
-              </span>
-              BOOK STORE / Khomenko Iryna
-            </a>
+            <nav>
+              <Link to="/booklist" className="main-header">
+                WITH LOVE
+                {/* span - однаковий відступ до тексту від icon */}
+                <span>
+                  <img src={logo} alt="" />
+                </span>
+                BOOK STORE / Khomenko Iryna
+              </Link>
+            </nav>
           </div>
           <div>
             {/* передаємо в HeaderActions функцію setUser з MyRoutes */}
             {user && <HeaderActions setUser={props.setUser} />}
           </div>
         </div>
-        <nav>
-          <div>
-            <Link to="/">Signin</Link>
-            <Link to="/booklist">BookList</Link>
-            <Link to="/cart">Cart</Link>
-          </div>
-        </nav>
       </header>
       <Outlet />
       <Footer />
