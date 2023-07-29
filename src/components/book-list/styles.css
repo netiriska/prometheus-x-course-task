@@ -258,27 +258,18 @@ body {
 
 .book__button {
   margin: 10px;
-  padding: 0.5em 1.5em;
-  height: 35px;
-  font-size: 0.9em; /*resize button on screen width */
+  padding: 0.7em 1.7em;
+  height: auto;
+  font-size: 1.2rem; /*resize button on screen width */
   text-align: center;
   font-weight: bold;
+  background-color: #7041c7;
   transition: 0.5s;
-  background-size: 200%;
-  background-image: linear-gradient(
-    to right,
-    #c0f546 0%,
-    #72d654 51%,
-    #7a3ccb 100%
-  );
-  /* background-color: rgb(144, 247, 10); */
   border-radius: 10px;
-  box-shadow: 0 0 10px #461d94;
-  background-position: right bottom;
   color: #c0f546;
 }
 
 .book__button:hover {
   color: white;
-  background-position: left center;
+  box-shadow: 0 0 10px #461d94;
 }

@@ -29,7 +29,6 @@ export default function SpecificBook(props) {
 
   return (
     <div>
-      <h1>SpecificBook page</h1>
       <div className="wrapper">
         <main>
           <div className="specific-book">

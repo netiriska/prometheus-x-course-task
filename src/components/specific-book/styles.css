@@ -154,26 +154,18 @@ body {
 .specific-book__add_button {
   padding: 0.7em 1.7em;
   font-weight: bold;
-  height: 35px;
-  font-size: 15px;
+  font-size: 1.2rem;
   transition: 0.5s;
-  background-size: 200%;
-  background-image: linear-gradient(
-    to right,
-    #c0f546 0%,
-    #72d654 51%,
-    #7a3ccb 100%
-  );
-  /* background-color: rgb(144, 247, 10); */
+  background-color: #7041c7;
   border-radius: 10px;
-  box-shadow: 0 0 10px #461d94;
-  background-position: right bottom;
   color: #c0f546;
+  text-align: center;
+  height: auto;
 }
 
 .specific-book__add_button:hover {
   color: white;
-  background-position: left center;
+  box-shadow: 0 0 10px #461d94;
 }
 
 .price,
