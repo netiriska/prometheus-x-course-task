@@ -19,7 +19,7 @@ export default function Header(props) {
                 WITH LOVE
                 {/* span - однаковий відступ до тексту від icon */}
                 <span>
-                  <img src={logo} alt="" />
+                  <img className="main-header__icon" src={logo} alt="" />
                 </span>
                 BOOK STORE / Khomenko Iryna
               </Link>
