@@ -17,7 +17,9 @@ export default function Cart(props) {
     return (
       <div className="cart__empty_purchase">
         <div className="cart__purchase_button_container">
-          <button className="cart__purchase_button">Purchase</button>
+          <button className="cart__purchase_button" disabled={true}>
+            Purchase
+          </button>
         </div>
         <EmptyCart />
       </div>
