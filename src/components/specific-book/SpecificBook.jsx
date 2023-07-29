@@ -2,6 +2,7 @@ import CurrentBookContext from "../../context/CurrentBookContext";
 import SelectedBooksContext from "../../context/SelectedBooksContext";
 import "./styles.css";
 import { useContext, useState } from "react";
+import imageNotFound from "../../images/specific-book/imageNotFound.png";
 
 export default function SpecificBook(props) {
   const currentBook = useContext(CurrentBookContext);
@@ -27,6 +28,10 @@ export default function SpecificBook(props) {
 
   const totalPrice = parseFloat((currentBook.price * quantity).toFixed(2));
 
+  const onErrorHandler = (e) => {
+    e.currentTarget.src = imageNotFound;
+    e.currentTarget.classList.add("image__not_found");
+  };
   return (
     <div>
       <div className="wrapper">
@@ -35,7 +40,11 @@ export default function SpecificBook(props) {
             <div className="container">
               <div className="bookinfo">
                 <div className="specific-book__column specific-book__image">
-                  <img src={currentBook.image} alt="Book image" />
+                  <img
+                    src={currentBook.image}
+                    alt="Book image"
+                    onError={onErrorHandler}
+                  />
                 </div>
                 <div className="specific-book__column specific-book__info">
                   <p>
