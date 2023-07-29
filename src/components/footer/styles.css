@@ -2,10 +2,18 @@ footer {
   border: 1px solid green;
   /* sticky footer */
   margin-top: auto;
+  background-image: linear-gradient(to right, #ccf46f 0%, #9be086 51%);
 }
 
 .footerText {
   text-align: center;
   padding: 20px;
   font-size: 0.9vw;
+  color: #250958;
+  font-weight: bold;
+}
+
+.footerText__link {
+  color: #ccf46f;
+  text-shadow: 1px 1px 2px #7a3ccb;
 }

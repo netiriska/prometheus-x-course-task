@@ -162,13 +162,13 @@ body {
     to right,
     #c0f546 0%,
     #72d654 51%,
-    #9d81c2 100%
+    #7a3ccb 100%
   );
   /* background-color: rgb(144, 247, 10); */
   border-radius: 10px;
   box-shadow: 0 0 10px #461d94;
   background-position: right bottom;
-  color: #250958;
+  color: #c0f546;
 }
 
 .specific-book__add_button:hover {
