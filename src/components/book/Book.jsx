@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import imageNotFound from "../../images/specific-book/imageNotFound.png";
+import imageNotFound from "../../images/specific-book/imageNotFoundVertical.png";
 
 export default function Book(props) {
   const navigate = useNavigate();
