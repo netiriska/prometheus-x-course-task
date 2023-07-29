@@ -45,7 +45,6 @@ export default function Signin(props) {
 
   return (
     <div className="auth-form-container">
-      <h1>Signin page</h1>
       <div className="container">
         <div className="sign-in">
           <img className="sign-in__image" src={avatar} alt="avatar" />
