@@ -47,9 +47,9 @@ export default function PurchasedBooks() {
                   handleChange={handleChange}
                 >
                   <td>{book.title}</td>
-                  <td>{book.price}</td>
+                  <td>${book.price}</td>
                   <td>{book.quantity}</td>
-                  <td>{book.totalPrice}</td>
+                  <td>${book.totalPrice}</td>
                   <td>
                     <button
                       className="purchase__delete-button"
@@ -64,7 +64,7 @@ export default function PurchasedBooks() {
                 <td></td>
                 <td></td>
                 <td className="grand-total">Grand Total</td>
-                <td>{grandTotal}</td>
+                <td>${grandTotal}</td>
                 <td></td>
               </tr>
             </tbody>

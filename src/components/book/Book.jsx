@@ -36,7 +36,7 @@ export default function Book(props) {
           {props.book.author}
         </p>
         <div className="book__price_view">
-          <p className="book__price">{props.book.price}</p>
+          <p className="book__price">${props.book.price}</p>
           <button className="book__button" onClick={navigateBook}>
             View
           </button>

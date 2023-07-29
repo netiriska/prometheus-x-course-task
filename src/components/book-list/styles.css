@@ -206,7 +206,7 @@ body {
   width: 75%;
   text-align: center;
   align-items: flex-start;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   /* To center the element horizontally */
   margin-left: auto;
   margin-right: auto;
@@ -216,15 +216,10 @@ body {
 .book {
   width: calc(75% / 3);
   text-align: center;
-  border: 1px solid red;
+  border: 2px solid #c0f546;
   border-radius: 10px;
   margin: 15px;
   max-width: 100%;
-}
-
-.book > img {
-  border-radius: 10px;
-  border: 2px solid green;
 }
 
 .book__image,
