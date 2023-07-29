@@ -67,7 +67,7 @@ export default function SpecificBook(props) {
                 <div className="specific-book__column specific-book__calculation">
                   <div className="price">
                     <p>Price</p>
-                    <p id="pricePerBook">{currentBook.price}</p>
+                    <p id="pricePerBook">${currentBook.price}</p>
                   </div>
                   <form action="/">
                     <div className="choice">
@@ -83,8 +83,8 @@ export default function SpecificBook(props) {
                     </div>
                   </form>
                   <div className="totalPrice">
-                    <div>Total price</div>
-                    <p id="totalPrice">{totalPrice}</p>
+                    <p>Total price</p>
+                    <p id="totalPrice">${totalPrice}</p>
                   </div>
                   <div className="specific-book__button">
                     <button
