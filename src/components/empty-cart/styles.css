@@ -1,5 +1,5 @@
 .cart__image {
-  width: 150px;
+  width: 250px;
 }
 
 .cart__empty {
@@ -7,4 +7,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 1.4em;
+  color: #250958;
+  font-weight: bold;
 }

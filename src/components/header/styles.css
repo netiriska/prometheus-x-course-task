@@ -3,6 +3,7 @@
   border: 1px solid #c41111;
   padding: 25px 10px 25px 10px;
   display: flex; /* headerActions items in right side */
+  background-image: linear-gradient(to right, #ccf46f 0%, #9be086 51%);
 }
 
 .headerActions__container {
@@ -17,8 +18,10 @@
 .main-header {
   text-decoration: none;
   font-weight: bold;
-  color: black;
+  color: #7a3ccb;
   font-size: 20px;
+  text-shadow: 1px 1px 2px #090215;
+  text-align: center;
 }
 
 .headerActions__cart {
@@ -39,13 +42,13 @@
     to right,
     #c0f546 0%,
     #72d654 51%,
-    #9d81c2 100%
+    #7a3ccb 100%
   );
   /* background-color: rgb(144, 247, 10); */
   border-radius: 10px;
   box-shadow: 0 0 10px #461d94;
   background-position: right bottom;
-  color: #250958;
+  color: #c0f546;
 }
 
 .headerActions__button:hover {

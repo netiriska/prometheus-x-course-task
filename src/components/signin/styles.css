@@ -182,11 +182,11 @@ header {
     to right,
     #c0f546 0%,
     #72d654 51%,
-    #9d81c2 100%
+    #7a3ccb 100%
   );
   box-shadow: 0 0 10px #461d94;
   background-position: right bottom;
-  color: #250958;
+  color: #c0f546;
 }
 
 .sign-in__button:hover {

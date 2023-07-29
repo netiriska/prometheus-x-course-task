@@ -5,7 +5,11 @@ export default function Footer() {
     <footer>
       <p className="footerText">
         Виконано в
-        <a href="https://prometheus.org.ua/" target="_blank">
+        <a
+          className="footerText__link"
+          href="https://prometheus.org.ua/"
+          target="_blank"
+        >
           {" "}
           Prometheus{" "}
         </a>

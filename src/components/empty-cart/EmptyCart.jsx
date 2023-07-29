@@ -5,7 +5,7 @@ export default function EmptyCart() {
   return (
     <div className="cart__empty">
       <img className="cart__image" src={cart} alt="cart" />
-      <p>Cart empty...</p>
+      <p>Your cart is empty</p>
     </div>
   );
 }
