@@ -164,6 +164,10 @@ header {
   text-align: center;
 }
 
+.sign-in__input:focus {
+  box-shadow: 0 0 10px #461d94;
+}
+
 .sign-in__button {
   position: relative;
   width: 200px;
@@ -175,24 +179,23 @@ header {
   align-self: center;
   padding: 0 8px;
   background: url(../../images/signin/unlock-fill.svg) no-repeat scroll 7px 7px;
+  background-color: #7041c7;
   padding-left: 30px;
   transition: 0.5s;
-  background-size: 200%;
-  background-image: linear-gradient(
-    to right,
-    #c0f546 0%,
-    #72d654 51%,
-    #7a3ccb 100%
-  );
-  box-shadow: 0 0 10px #461d94;
-  background-position: right bottom;
   color: #c0f546;
 }
 
 .sign-in__button:hover {
   color: white;
-  background-position: left center;
+  box-shadow: 0 0 10px #461d94;
 }
+
+.sign-in__button:disabled {
+  color: white;
+  background-color: #bebebe;
+  box-shadow: none;
+}
+
 /* +++++++++++++++ */
 @media (max-width: 1200px) {
   .wrapper {
