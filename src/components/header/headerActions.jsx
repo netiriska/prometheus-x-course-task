@@ -6,15 +6,17 @@ import avatar from "../../images/signin/icon-username.png";
 import heartUkraine from "../../images/header/ukraine_heart_sticker.png";
 
 export default function HeaderActions(props) {
-  const handleLogout = () => props.setUser(null);
-
   const user = useContext(UserContext);
-  console.log(user);
 
   const navigate = useNavigate();
 
   const navigateCart = () => {
     navigate("/cart");
+  };
+
+  const handleLogout = () => {
+    props.setUser(null);
+    props.setSelectedBooks([]);
   };
 
   return (

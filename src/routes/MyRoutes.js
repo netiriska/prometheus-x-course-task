@@ -39,7 +39,15 @@ export default function MyRoutes() {
         <CurrentBookContext.Provider value={currentBook}>
           <SelectedBooksContext.Provider value={selectedBooks}>
             <Routes>
-              <Route path="/" element={<Header setUser={setUser} />}>
+              <Route
+                path="/"
+                element={
+                  <Header
+                    setUser={setUser}
+                    setSelectedBooks={setSelectedBooks}
+                  />
+                }
+              >
                 <Route path="/" element={<Signin setUser={setUser} />} />
                 <Route
                   path="/specificbook"
