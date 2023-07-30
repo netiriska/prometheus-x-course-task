@@ -17,7 +17,11 @@ export default function Cart(props) {
     return (
       <div className="cart__empty_purchase">
         <div className="cart__purchase_button_container">
-          <button className="cart__purchase_button" disabled={true}>
+          <button
+            className="cart__purchase_button"
+            disabled={true}
+            onClick={() => props.setSelectedBooks([])}
+          >
             Purchase
           </button>
         </div>
@@ -32,7 +36,7 @@ export default function Cart(props) {
             Purchase
           </button>
         </div>
-        <PurchasedBooks />
+        <PurchasedBooks setSelectedBooks={props.setSelectedBooks} />
       </div>
     );
   }

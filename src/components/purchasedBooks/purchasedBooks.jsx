@@ -1,30 +1,53 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import SelectedBooksContext from "../../context/SelectedBooksContext";
 import "./styles.css";
 import deleteIcon from "../../images/specific-book/trash-fill.svg";
 import EmptyCart from "../empty-cart/EmptyCart";
 
-export default function PurchasedBooks() {
+export default function PurchasedBooks(props) {
   const selectedBooks = useContext(SelectedBooksContext);
   const [rowsData, setRowsData] = useState(selectedBooks);
 
-  const grandTotal = rowsData.reduce(
-    (totalPrice, book) => totalPrice + book.totalPrice,
-    0
-  );
+  useEffect(() => {
+    setRowsData(selectedBooks);
+  }, [selectedBooks]);
+
+  useEffect(() => {
+    const grandTotal = rowsData.reduce(
+      (totalPrice, book) => totalPrice + book.totalPrice,
+      0
+    );
+    setGrandTotal(grandTotal);
+  }, [rowsData]);
+
+  const [grandTotal, setGrandTotal] = useState(0);
 
   const deleteTableRows = (index) => {
-    const rows = [...rowsData];
-    rows.splice(index, 1);
-    setRowsData(rows);
+    // Use the setter function to update rowsData
+    setRowsData((prevRows) => {
+      const rows = [...prevRows];
+      rows.splice(index, 1);
+      return rows;
+    });
+
+    // Також оновлюємо значення контексту за допомогою функції-сеттера
+    props.setSelectedBooks((prevSelectedBooks) => {
+      const books = [...prevSelectedBooks];
+      books.splice(index, 1);
+      return books;
+    });
   };
 
   const handleChange = (index, event) => {
     const { name, value } = event.target;
-    const rowsInput = [...rowsData];
-    rowsInput[index][name] = value;
-    setRowsData(rowsInput);
+    // Use the setter function to update rowsData
+    setRowsData((prevRows) => {
+      const rowsInput = [...prevRows];
+      rowsInput[index][name] = value;
+      return rowsInput;
+    });
   };
+
   return (
     <div className="purchase__table-container">
       {rowsData.length > 0 ? (
