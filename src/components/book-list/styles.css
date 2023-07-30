@@ -192,7 +192,7 @@ body {
 .books__container {
   /* sticky footer */
   /*  https://www.youtube.com/watch?v=pggIVY5eOGM*/
-  min-height: 100vh;
+  min-height: calc(100vh - 4rem - 3rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
