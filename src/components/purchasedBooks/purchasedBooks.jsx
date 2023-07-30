@@ -1,8 +1,8 @@
 import { useContext, useState, useEffect } from "react";
 import SelectedBooksContext from "../../context/SelectedBooksContext";
-import "./styles.css";
 import deleteIcon from "../../images/specific-book/trash-fill.svg";
 import EmptyCart from "../empty-cart/EmptyCart";
+import "./styles.css";
 
 export default function PurchasedBooks(props) {
   const selectedBooks = useContext(SelectedBooksContext);

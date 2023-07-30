@@ -1,10 +1,10 @@
+import { useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
 import logo from "../../images/header/bookmark-heart.svg";
-import "./styles.css";
-import { useContext } from "react";
 import UserContext from "../../context/UserContext";
 import HeaderActions from "./headerActions";
 import Footer from "../footer/footer";
+import "./styles.css";
 
 export default function Header(props) {
   const user = useContext(UserContext);

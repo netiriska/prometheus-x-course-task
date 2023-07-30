@@ -1,8 +1,8 @@
+import { useContext, useState } from "react";
 import CurrentBookContext from "../../context/CurrentBookContext";
 import SelectedBooksContext from "../../context/SelectedBooksContext";
-import "./styles.css";
-import { useContext, useState } from "react";
 import imageNotFound from "../../images/specific-book/imageNotFoundVertical.png";
+import "./styles.css";
 
 export default function SpecificBook(props) {
   const currentBook = useContext(CurrentBookContext);

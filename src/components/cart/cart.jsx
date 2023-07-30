@@ -1,12 +1,12 @@
-import "./styles.css";
 import { useContext } from "react";
 import SelectedBooksContext from "../../context/SelectedBooksContext";
 import PurchasedBooks from "../purchasedBooks/purchasedBooks";
 import EmptyCart from "../empty-cart/EmptyCart";
+import "./styles.css";
 
 export default function Cart(props) {
   const selectedBooks = useContext(SelectedBooksContext);
-  console.log(selectedBooks);
+  // console.log(selectedBooks);
 
   const purchaseBooks = () => {
     props.setSelectedBooks([]);
