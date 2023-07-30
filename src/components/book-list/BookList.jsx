@@ -1,7 +1,7 @@
-import Book from "../book/Book";
-import "./styles.css";
 import { useContext, useState, useMemo } from "react";
+import Book from "../book/Book";
 import BooksContext from "../../context/BooksContext";
+import "./styles.css";
 
 export default function BookList(props) {
   const books = useContext(BooksContext);
