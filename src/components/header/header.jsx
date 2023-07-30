@@ -27,7 +27,12 @@ export default function Header(props) {
           </div>
           <div>
             {/* передаємо в HeaderActions функцію setUser з MyRoutes */}
-            {user && <HeaderActions setUser={props.setUser} />}
+            {user && (
+              <HeaderActions
+                setUser={props.setUser}
+                setSelectedBooks={props.setSelectedBooks}
+              />
+            )}
           </div>
         </div>
       </header>

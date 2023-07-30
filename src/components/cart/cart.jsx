@@ -19,7 +19,7 @@ export default function Cart(props) {
         <div className="cart__purchase_button_container">
           <button
             className="cart__purchase_button"
-            disabled={true}
+            disabled={selectedBooks.length === 0}
             onClick={() => props.setSelectedBooks([])}
           >
             Purchase
