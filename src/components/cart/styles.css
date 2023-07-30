@@ -24,14 +24,13 @@
   background-position: right bottom;
   color: #c0f546;
 }
+.cart__purchase_button:hover {
+  color: white;
+  box-shadow: 0 0 10px #461d94;
+}
 
 .cart__purchase_button:disabled {
   color: white;
   background-color: #bebebe;
   box-shadow: none;
-}
-
-.cart__purchase_button:hover {
-  color: white;
-  box-shadow: 0 0 10px #461d94;
 }
