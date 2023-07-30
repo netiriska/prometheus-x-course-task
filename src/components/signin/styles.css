@@ -104,30 +104,10 @@ body {
   flex-direction: column;
 }
 
-.authorization {
-  flex: 1 1 50%;
-}
-
-.main-header {
-  text-decoration: none;
-  font-weight: bold;
-  color: black;
-  font-size: 20px;
-}
-
 .sign-in {
   display: block;
   text-align: center;
   padding: 80px 50px 150px 50px;
-}
-/* .input_error-message {
-  color: red;
-  margin-top: 5px;
-} */
-
-header {
-  border-top: 2px solid #ccc;
-  border-bottom: 2px solid #ccc;
 }
 
 .sign-in__image {
@@ -147,6 +127,7 @@ header {
 .sign-in__label {
   font-weight: bold;
 }
+
 .sign-in__input {
   width: 200px;
   box-sizing: border-box;
@@ -158,6 +139,7 @@ header {
 .input_error-message {
   color: #7041c7;
 }
+
 #username {
   background: url(../../images/signin/person-heart.svg) no-repeat scroll 7px 7px;
   padding-left: 30px;
