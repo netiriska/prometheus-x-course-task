@@ -11,3 +11,9 @@
   color: #250958;
   font-weight: bold;
 }
+
+.cart__purchase_button:disabled {
+  color: white;
+  background-color: #bebebe;
+  box-shadow: none;
+}

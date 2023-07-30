@@ -42,7 +42,7 @@ export default function SpecificBook(props) {
                 <div className="specific-book__column specific-book__image">
                   <img
                     src={currentBook.image}
-                    alt="Book image"
+                    alt="Book"
                     onError={onErrorHandler}
                   />
                 </div>
