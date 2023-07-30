@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import SelectedBooksContext from "../../context/SelectedBooksContext";
 import "./styles.css";
-import { RiDeleteBin2Line } from "react-icons/ri";
+import deleteIcon from "../../images/specific-book/trash-fill.svg";
 import EmptyCart from "../empty-cart/EmptyCart";
 
 export default function PurchasedBooks() {
@@ -55,7 +55,13 @@ export default function PurchasedBooks() {
                       className="purchase__delete-button"
                       onClick={() => deleteTableRows(index)}
                     >
-                      <RiDeleteBin2Line />
+                      <span>
+                        <img
+                          className="purchase__delete-button_icon"
+                          src={deleteIcon}
+                          alt="Delete"
+                        />
+                      </span>
                     </button>
                   </td>
                 </tr>
@@ -63,8 +69,8 @@ export default function PurchasedBooks() {
               <tr>
                 <td></td>
                 <td></td>
-                <td className="grand-total">Grand Total</td>
-                <td>${grandTotal}</td>
+                <td className="purchase__grand-total">Grand Total</td>
+                <td className="purchase__grand-total">${grandTotal}</td>
                 <td></td>
               </tr>
             </tbody>
