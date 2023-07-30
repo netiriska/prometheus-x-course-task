@@ -27,7 +27,7 @@ export default function HeaderActions(props) {
       <button className="headerActions__button" onClick={handleLogout}>
         Sign-Out
       </button>
-      <img src={heartUkraine} alt="heart" />
+      <img className="headerActions__heart" src={heartUkraine} alt="heart" />
       <img
         className="headerActions__avatar"
         src={avatar}

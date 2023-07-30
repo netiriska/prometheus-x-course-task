@@ -29,16 +29,19 @@
 }
 
 .headerActions__cart {
-  width: 40px;
+  width: 2rem;
   margin-right: 10px;
   background: transparent;
 }
 
+.headerActions__heart {
+  width: 2.7rem;
+}
+
 .headerActions__button {
   margin-right: 10px; /*відстань між items headerActions*/
-  padding: 0.7em 1.7em;
-  height: 35px;
-  font-size: 1.2rem;
+  padding: 0.4em 1.7em;
+  font-size: 1rem;
   font-weight: bold;
   background-color: #7041c7;
   transition: 0.5s;
@@ -54,6 +57,7 @@
 }
 
 .headerActions__avatar {
+  width: 2rem;
   margin-right: 10px;
 }
 
