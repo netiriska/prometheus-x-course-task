@@ -1,7 +1,7 @@
 .cart__empty_purchase {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: calc(100vh - 4rem - 3rem);
   overflow: hidden;
   align-items: center;
   justify-content: center;

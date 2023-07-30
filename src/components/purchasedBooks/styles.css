@@ -1,5 +1,5 @@
 .purchase__table-container {
-  min-height: 100vh;
+  min-height: calc(100vh - 4rem - 3rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,5 +40,3 @@
 .purchase__grand-total {
   font-weight: bold;
 }
-
-
