@@ -38,16 +38,6 @@ export default function PurchasedBooks(props) {
     });
   };
 
-  const handleChange = (index, event) => {
-    const { name, value } = event.target;
-    // Use the setter function to update rowsData
-    setRowsData((prevRows) => {
-      const rowsInput = [...prevRows];
-      rowsInput[index][name] = value;
-      return rowsInput;
-    });
-  };
-
   return (
     <div className="purchase__table-container">
       {rowsData.length > 0 ? (
@@ -64,11 +54,7 @@ export default function PurchasedBooks(props) {
             </thead>
             <tbody>
               {rowsData.map((book, index) => (
-                <tr
-                  key={index}
-                  deleteTableRows={deleteTableRows}
-                  handleChange={handleChange}
-                >
+                <tr key={index}>
                   <td>{book.title}</td>
                   <td>${book.price}</td>
                   <td>{book.quantity}</td>
