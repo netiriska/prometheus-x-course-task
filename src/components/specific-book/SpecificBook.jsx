@@ -19,11 +19,13 @@ export default function SpecificBook(props) {
   };
 
   const addToCart = () => {
-    let book = Object.assign({}, currentBook, {
-      quantity: quantity,
-      totalPrice: totalPrice,
-    });
-    selectedBooks.push(book);
+    if (quantity >= 1 && quantity <= 42) {
+      let book = Object.assign({}, currentBook, {
+        quantity: quantity,
+        totalPrice: totalPrice,
+      });
+      selectedBooks.push(book);
+    }
   };
 
   const totalPrice = parseFloat((currentBook.price * quantity).toFixed(2));
