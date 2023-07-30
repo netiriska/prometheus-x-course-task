@@ -20,7 +20,7 @@ export default function Book(props) {
       <img
         className="book__image"
         src={props.book.image}
-        alt="book image"
+        alt="Book"
         onError={onErrorHandler}
       />
       <div className="book_short-info">
