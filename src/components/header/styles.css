@@ -1,6 +1,5 @@
 .authorization__container {
   margin: 0px auto;
-  border: 1px solid #c41111;
   padding: 1rem;
   display: flex; /* headerActions items in right side */
   background-image: linear-gradient(to right, #ccf46f 0%, #9be086 51%);

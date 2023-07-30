@@ -93,12 +93,12 @@ body {
 
 .container {
   margin: 0px auto;
-  border: 1px solid #c41111;
+  /* border: 1px solid #c41111; */
   padding: 25px 10px 25px 10px;
 }
 
 .auth-form-container {
-  min-height: 100vh;
+  min-height: calc(100vh - 4rem - 3rem); /* all - header - footer */
   overflow: hidden;
   display: flex;
   flex-direction: column;
