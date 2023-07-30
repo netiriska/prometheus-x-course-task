@@ -39,7 +39,7 @@ export default function SpecificBook(props) {
       <div className="wrapper">
         <main>
           <div className="specific-book">
-            <div className="container">
+            <div className="specific-book__container">
               <div className="bookinfo">
                 <div className="specific-book__column specific-book__image">
                   <img
