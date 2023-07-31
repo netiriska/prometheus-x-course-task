@@ -79,7 +79,9 @@ export default function PurchasedBooks(props) {
                 <td></td>
                 <td></td>
                 <td className="purchase__grand-total">Grand Total</td>
-                <td className="purchase__grand-total">${grandTotal}</td>
+                <td className="purchase__grand-total">
+                  ${grandTotal.toFixed(2)}
+                </td>
                 <td></td>
               </tr>
             </tbody>
