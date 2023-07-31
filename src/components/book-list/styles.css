@@ -106,6 +106,7 @@ h6 {
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
+
 .search_select__container {
   display: flex;
   flex-direction: row;
@@ -218,10 +219,10 @@ body {
   text-align: center;
   border: 2px solid #c0f546;
   border-radius: 10px;
-  margin: 15px;
+  margin: 3%;
   max-width: 100%;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 4%;
 }
 
 .book__image {
@@ -239,8 +240,8 @@ body {
 .image__not_found {
   max-width: 100%;
   max-height: 100%;
-  padding: 10px;
-  margin: 10px;
+  padding: 3%;
+  margin: 3%;
 }
 
 .book_short-info {
