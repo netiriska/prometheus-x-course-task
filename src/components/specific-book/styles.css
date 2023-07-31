@@ -192,6 +192,7 @@ body {
 .specific-book__add_button:active {
   color: #7041c7;
   background-color: #c0f546;
+  transition: 0s;
 }
 
 .price,
