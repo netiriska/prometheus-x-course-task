@@ -111,7 +111,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 5px;
+  padding: 20px;
 }
 
 .search__container {
@@ -221,6 +221,8 @@ body {
   border-radius: 10px;
   margin: 15px;
   max-width: 100%;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .book__image,
