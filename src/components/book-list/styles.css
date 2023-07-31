@@ -277,3 +277,8 @@ body {
   color: white;
   box-shadow: 0 0 10px #461d94;
 }
+
+.book__button:active {
+  color: #7041c7;
+  background-color: #c0f546;
+}
