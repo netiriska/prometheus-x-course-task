@@ -169,12 +169,6 @@ p {
   flex-basis: 20%;
 }
 
-.specific-book__calculation input[type="number"] {
-  font-size: 0.9em;
-  padding: 0.5em.75em; /*https://stackoverflow.com/questions/60367151/adaptive-input-width-css*/
-  height: auto;
-}
-
 .specific-book__button {
   display: flex;
   justify-content: flex-end;
@@ -205,14 +199,19 @@ p {
   align-items: center;
 }
 
-.choice input {
-  border: 2px solid #b7b5b5;
+.totalPrice {
+  font-weight: bold;
+}
+
+.choice input[type="number"] {
+  font-size: 0.9em;
+  border: 2px solid #7041c7;
   border-radius: 10px;
   display: block;
   height: calc(2.25rem + 2px);
   margin: 0;
-  padding: 0.375rem 0.75rem;
-  line-height: 1.5;
+  height: auto;
+  padding: 0.5em 0.75em; /*https://stackoverflow.com/questions/60367151/adaptive-input-width-css*/
   text-align: right;
 }
 
@@ -224,4 +223,13 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-moz-outer-spin-button,
 input[type="number"]::-ms-outer-spin-button {
   opacity: 1;
+}
+
+.choice input[type="number"]::after {
+  color: blue;
+  content: "\25B2";
+}
+.choice input[type="number"]::before {
+  color: rgb(106, 180, 57);
+  content: "\25C2";
 }
