@@ -189,6 +189,11 @@ body {
   box-shadow: 0 0 10px #461d94;
 }
 
+.specific-book__add_button:active {
+  color: #7041c7;
+  background-color: #c0f546;
+}
+
 .price,
 .totalPrice,
 .choice {
