@@ -221,7 +221,7 @@ body {
   margin: 4%;
   max-width: 100%;
   margin-top: 0;
-  margin-bottom: 4%;
+  margin-bottom: 3em;
 }
 
 .book__image {
@@ -277,9 +277,4 @@ body {
 .book__button:hover {
   color: white;
   box-shadow: 0 0 10px #461d94;
-}
-
-.book__button:active {
-  color: #7041c7;
-  background-color: #c0f546;
 }
