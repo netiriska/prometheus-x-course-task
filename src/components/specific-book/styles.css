@@ -75,6 +75,7 @@ ul li {
 img {
   vertical-align: top;
 }
+
 /* В кінці обнуляємо всі наші заголовки h */
 h1,
 h2,
@@ -123,10 +124,6 @@ body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-p {
-  line-height: 1.8;
-}
-
 .specific-book__container {
   display: flex;
   flex-direction: column;
@@ -136,7 +133,9 @@ p {
   margin: 0px auto;
   padding: 2% 1%;
 }
-
+.specific-book__container p {
+  line-height: 1.8;
+}
 .specific-book__container div {
   padding: 5px 5px 5px 5px;
 }
@@ -153,8 +152,6 @@ p {
 
 .specific-book__image {
   flex-grow: 1;
-  max-width: 100%;
-  max-height: 100%;
 }
 
 .specific-book__info {
@@ -223,13 +220,4 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-moz-outer-spin-button,
 input[type="number"]::-ms-outer-spin-button {
   opacity: 1;
-}
-
-.choice input[type="number"]::after {
-  color: blue;
-  content: "\25B2";
-}
-.choice input[type="number"]::before {
-  color: rgb(106, 180, 57);
-  content: "\25C2";
 }
