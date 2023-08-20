@@ -1,40 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import avatar from "../../images/signin/icon-username.png";
 import "./styles.css";
 
 export default function Signin(props) {
   // Створюємо стейт для збереження значення інпуту
-  const [usernameValue, setUsernameValue] = useState(null);
+  const [usernameValue, setUsernameValue] = useState("");
 
-  const [disabled, setDisabled] = useState(true);
-  const [showErrorMessage, setShowErrorMessage] = useState(false);
   const [isUserTyping, setIsUserTyping] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    const trimmedUsername = e.target.value.trim(); // Видаляємо пробіли на початку та в кінці
+    const trimmedUsername = e.target.value.trim();
     setUsernameValue(trimmedUsername);
     setIsUserTyping(true);
-    if (trimmedUsername.length >= 4 && trimmedUsername.length <= 16) {
-      setDisabled(false);
-      setShowErrorMessage(false);
-    } else {
-      setDisabled(true);
-      setShowErrorMessage(true);
-    }
   };
-
-  useEffect(() => {
-    if (disabled) {
-      setShowErrorMessage(true);
-    }
-  }, [disabled]);
 
   const handleInputBlur = (e) => {
     if (e.target.value === "") {
       setIsUserTyping(false);
-      setShowErrorMessage(false);
     }
   };
 
@@ -43,6 +27,9 @@ export default function Signin(props) {
     // 👇️ navigate to /
     navigate("/booklist");
   };
+
+  const availableUsername =
+    usernameValue.length >= 4 && usernameValue.length <= 16;
 
   return (
     <div className="auth-form-container">
@@ -64,18 +51,18 @@ export default function Signin(props) {
                 onChange={handleChange}
                 onBlur={handleInputBlur}
               />
-              {showErrorMessage && isUserTyping && (
+              {!availableUsername && isUserTyping ? (
                 <span className="input_error-message">
                   Username must have at least 4 characters but cannot exceed 16
                   characters
                 </span>
-              )}
+              ) : null}
             </div>
             <button
               className="sign-in__button"
               type="submit"
               name="submit"
-              disabled={disabled}
+              disabled={!availableUsername}
               onClick={navigateBooklist}
             >
               Sign-In
