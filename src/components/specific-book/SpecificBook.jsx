@@ -6,12 +6,10 @@ import "./styles.css";
 
 export default function SpecificBook(props) {
   const currentBook = useContext(CurrentBookContext);
-  // console.log(currentBook);
 
   const selectedBooks = useContext(SelectedBooksContext);
-  // console.log(selectedBooks);
 
-  const [quantity, setQuantity] = useState(1); // Встановлюємо початкове значення 1
+  const [quantity, setQuantity] = useState(1);
 
   const handleQuantityChange = (event) => {
     const newQuantity = parseInt(event.target.value, 10);

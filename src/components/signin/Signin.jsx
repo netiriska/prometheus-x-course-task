@@ -4,7 +4,6 @@ import avatar from "../../images/signin/icon-username.png";
 import "./styles.css";
 
 export default function Signin(props) {
-  // Створюємо стейт для збереження значення інпуту
   const [usernameValue, setUsernameValue] = useState("");
 
   const [isUserTyping, setIsUserTyping] = useState(false);
@@ -24,7 +23,6 @@ export default function Signin(props) {
 
   const navigateBooklist = () => {
     props.setUser(usernameValue);
-    // 👇️ navigate to /
     navigate("/booklist");
   };
 

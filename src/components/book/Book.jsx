@@ -6,7 +6,6 @@ export default function Book(props) {
 
   const navigateBook = () => {
     props.setCurrentBook(props.book);
-    // 👇️ navigate to /
     navigate("/specificbook");
   };
 
@@ -26,8 +25,7 @@ export default function Book(props) {
       <div className="book_short-info">
         <p className="book__title">
           <strong>Book name: </strong>
-          {props.book.title.length >
-          24 /*https://dirask.com/questions/React-limit-string-to-display-only-10-characters-of-it-in-component-pON75D*/
+          {props.book.title.length > 24
             ? props.book.title.substring(0, 24) + "..."
             : props.book.title}
         </p>

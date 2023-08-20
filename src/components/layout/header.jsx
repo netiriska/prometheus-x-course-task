@@ -28,7 +28,6 @@ export default function Header(props) {
           <nav>
             <Link to="/booklist" className="main-header">
               WITH LOVE
-              {/* span - однаковий відступ до тексту від icon */}
               <span>
                 <img className="main-header__icon" src={logo} alt="" />
               </span>
@@ -37,7 +36,6 @@ export default function Header(props) {
           </nav>
         </div>
         <div>
-          {/* передаємо в HeaderActions функцію setUser з MyRoutes */}
           {user && (
             <div className="headerActions__container">
               <button

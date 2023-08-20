@@ -23,14 +23,12 @@ export default function PurchasedBooks(props) {
   const [grandTotal, setGrandTotal] = useState(0);
 
   const deleteTableRows = (index) => {
-    // Use the setter function to update rowsData
     setRowsData((prevRows) => {
       const rows = [...prevRows];
       rows.splice(index, 1);
       return rows;
     });
 
-    // Також оновлюємо значення контексту за допомогою функції-сеттера
     props.setSelectedBooks((prevSelectedBooks) => {
       const books = [...prevSelectedBooks];
       books.splice(index, 1);
