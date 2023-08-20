@@ -19,9 +19,9 @@ export default function PurchasedBooks(props) {
 
   const deleteTableRows = (index) => {
     props.setSelectedBooks((prevSelectedBooks) => {
-      const books = [...prevSelectedBooks];
-      books.splice(index, 1);
-      return books;
+      const rows = [...prevSelectedBooks];
+      rows.splice(index, 1);
+      return rows;
     });
   };
 
