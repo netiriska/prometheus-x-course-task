@@ -5,7 +5,7 @@ import cart from "../../images/header/cart.svg";
 import avatar from "../../images/signin/icon-username.png";
 import heartUkraine from "../../images/header/ukraine_heart_sticker.png";
 
-export default function HeaderActions(props) {
+export default function Header(props) {
   const user = useContext(UserContext);
 
   const navigate = useNavigate();
