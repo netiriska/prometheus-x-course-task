@@ -6,29 +6,18 @@ import "./styles.css";
 
 export default function PurchasedBooks(props) {
   const selectedBooks = useContext(SelectedBooksContext);
-  const [rowsData, setRowsData] = useState(selectedBooks);
 
   useEffect(() => {
-    setRowsData(selectedBooks);
-  }, [selectedBooks]);
-
-  useEffect(() => {
-    const grandTotal = rowsData.reduce(
+    const grandTotal = selectedBooks.reduce(
       (totalPrice, book) => totalPrice + book.totalPrice,
       0
     );
     setGrandTotal(grandTotal);
-  }, [rowsData]);
+  }, [selectedBooks]);
 
   const [grandTotal, setGrandTotal] = useState(0);
 
   const deleteTableRows = (index) => {
-    setRowsData((prevRows) => {
-      const rows = [...prevRows];
-      rows.splice(index, 1);
-      return rows;
-    });
-
     props.setSelectedBooks((prevSelectedBooks) => {
       const books = [...prevSelectedBooks];
       books.splice(index, 1);
@@ -38,7 +27,7 @@ export default function PurchasedBooks(props) {
 
   return (
     <div className="purchase__table-container">
-      {rowsData.length > 0 ? (
+      {selectedBooks.length > 0 ? (
         <div className="purchase__table">
           <table>
             <thead>
@@ -51,7 +40,7 @@ export default function PurchasedBooks(props) {
               </tr>
             </thead>
             <tbody>
-              {rowsData.map((book, index) => (
+              {selectedBooks.map((book, index) => (
                 <tr key={index}>
                   <td>{book.title}</td>
                   <td>${book.price}</td>
