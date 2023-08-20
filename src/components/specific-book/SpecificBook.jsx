@@ -20,10 +20,7 @@ export default function SpecificBook(props) {
 
   const addToCart = () => {
     if (quantity >= 1 && quantity <= 42) {
-      let book = Object.assign({}, currentBook, {
-        quantity: quantity,
-        totalPrice: totalPrice,
-      });
+      let book = { ...currentBook, quantity, totalPrice };
       selectedBooks.push(book);
     }
   };
