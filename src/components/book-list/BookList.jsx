@@ -8,7 +8,6 @@ export default function BookList(props) {
   const [selectedPrice, setSelectedPrice] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
 
-  // https://marketsplash.com/tutorials/react-js/search-filter-in-react-js/
   const filterBooks = (event) => {
     const value = event.target.value.toLowerCase();
     setSearchQuery(value);
@@ -16,8 +15,6 @@ export default function BookList(props) {
 
   const filterOptions = {
     price: ["All", "Under $15", "$15-$30", "Over $30"],
-
-    // Add more filter options as needed
   };
 
   const filteredData = useMemo(() => {
@@ -28,7 +25,7 @@ export default function BookList(props) {
         item.title.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
-    // https://marketsplash.com/tutorials/react-js/search-filter-in-react-js/
+
     if (selectedPrice) {
       results = results.filter((book) => {
         const price = parseFloat(book.price);
@@ -44,8 +41,6 @@ export default function BookList(props) {
         }
       });
     }
-
-    // Add more filter conditions for additional filter options
 
     return results;
   }, [books.books, searchQuery, selectedPrice]);

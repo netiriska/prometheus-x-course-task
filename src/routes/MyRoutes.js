@@ -24,7 +24,6 @@ export default function MyRoutes() {
   const [selectedBooks, setSelectedBooks] = useState([]);
   const [currentBook, setCurrentBook] = useState(null);
 
-  // https://www.robinwieruch.de/react-router-private-routes/
   const ProtectedRoute = ({ user, redirectPath = "/", children }) => {
     if (!user) {
       return <Navigate to={redirectPath} replace />;

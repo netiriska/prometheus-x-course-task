@@ -10,8 +10,8 @@
 
 .cart__purchase_button {
   position: absolute;
-  top: 10px; /* Розташовуємо кнопку зверху від контейнера */
-  right: 10px; /* Розташовуємо кнопку праворуч від контейнера */
+  top: 10px;
+  right: 10px;
   margin: 20px;
   padding: 0.7em 1.7em;
   font-weight: bold;

@@ -6,14 +6,12 @@ import "./styles.css";
 
 export default function Cart(props) {
   const selectedBooks = useContext(SelectedBooksContext);
-  // console.log(selectedBooks);
 
   const purchaseBooks = () => {
     props.setSelectedBooks([]);
   };
 
   if (selectedBooks.length === 0) {
-    // Показуємо пустий кошик, якщо обрані книги відсутні
     return (
       <div className="cart__empty_purchase">
         <div className="cart__purchase_button_container">

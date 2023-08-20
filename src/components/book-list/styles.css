@@ -191,8 +191,6 @@ body {
 }
 
 .books__container {
-  /* sticky footer */
-  /*  https://www.youtube.com/watch?v=pggIVY5eOGM*/
   min-height: calc(100vh - 4rem - 3rem);
   display: flex;
   flex-direction: column;
@@ -207,7 +205,6 @@ body {
   width: 75%;
   text-align: center;
   align-items: flex-start;
-  /* To center the element horizontally */
   margin-left: auto;
   margin-right: auto;
   color: #250958;
@@ -245,7 +242,7 @@ body {
 }
 
 .book_short-info {
-  font-size: 0.9vw; /* resize text  depend on screen width*/
+  font-size: 0.9vw;
 }
 
 .book__price_view {
@@ -265,7 +262,7 @@ body {
   margin: 6%;
   padding: 0.7em 1.7em;
   height: auto;
-  font-size: 0.9em; /*resize button on screen width */
+  font-size: 0.9em;
   text-align: center;
   font-weight: bold;
   background-color: #7041c7;

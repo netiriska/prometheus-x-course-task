@@ -1,5 +1,5 @@
 .pageNotFound {
-  min-height: calc(100vh - 4rem - 3rem); /* all - header - footer */
+  min-height: calc(100vh - 4rem - 3rem);
 }
 
 .pageNotFound__text {

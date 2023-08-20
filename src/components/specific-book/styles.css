@@ -142,7 +142,7 @@ body {
 }
 
 .specific-book__column {
-  font-size: 0.9vw; /* resize text  depend on screen width*/
+  font-size: 0.9vw;
 }
 
 .bookinfo {
@@ -175,7 +175,7 @@ body {
 .specific-book__add_button {
   padding: 0.7em 1.7em;
   font-weight: bold;
-  font-size: 0.9em; /*resize button on screen width */
+  font-size: 0.9em;
   transition: 0.5s;
   background-color: #7041c7;
   border-radius: 10px;
@@ -215,11 +215,10 @@ body {
   height: calc(2.25rem + 2px);
   margin: 0;
   height: auto;
-  padding: 0.5em 0.75em; /*https://stackoverflow.com/questions/60367151/adaptive-input-width-css*/
+  padding: 0.5em 0.75em;
   text-align: right;
 }
 
-/* показувати завжди стрілки вгору-вниз */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-moz-inner-spin-button,
 input[type="number"]::-ms-inner-spin-button,
