@@ -1,41 +1,15 @@
-import { useContext } from "react";
-import { Link, Outlet } from "react-router-dom";
-import logo from "../../images/header/bookmark-heart.svg";
-import UserContext from "../../context/UserContext";
+import { Outlet } from "react-router-dom";
 import Header from "./header";
 import Footer from "../footer/footer";
 import "./styles.css";
 
 export default function Layout(props) {
-  const user = useContext(UserContext);
-
   return (
     <div>
-      <header>
-        <div className="authorization__container">
-          <div className="authorization">
-            <nav>
-              <Link to="/booklist" className="main-header">
-                WITH LOVE
-                {/* span - однаковий відступ до тексту від icon */}
-                <span>
-                  <img className="main-header__icon" src={logo} alt="" />
-                </span>
-                BOOK STORE / Khomenko Iryna
-              </Link>
-            </nav>
-          </div>
-          <div>
-            {/* передаємо в HeaderActions функцію setUser з MyRoutes */}
-            {user && (
-              <Header
-                setUser={props.setUser}
-                setSelectedBooks={props.setSelectedBooks}
-              />
-            )}
-          </div>
-        </div>
-      </header>
+      <Header
+        setUser={props.setUser}
+        setSelectedBooks={props.setSelectedBooks}
+      />
       <Outlet />
       <Footer />
     </div>
