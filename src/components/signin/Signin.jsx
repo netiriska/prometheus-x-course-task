@@ -13,9 +13,10 @@ export default function Signin(props) {
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setUsernameValue(e.target.value);
+    const trimmedUsername = e.target.value.trim(); // Видаляємо пробіли на початку та в кінці
+    setUsernameValue(trimmedUsername);
     setIsUserTyping(true);
-    if (e.target.value.length >= 4 && e.target.value.length <= 16) {
+    if (trimmedUsername.length >= 4 && trimmedUsername.length <= 16) {
       setDisabled(false);
       setShowErrorMessage(false);
     } else {
