@@ -14,11 +14,11 @@ import SelectedBooksContext from "../context/SelectedBooksContext";
 export default function MyRoutes() {
   const [user, setUser] = useState(null);
 
-  const [books, setBooks] = useState({ books: [] });
+  const [books, setBooks] = useState([]);
   useEffect(() => {
     fetch("/prometheus-x-course-task/books.json")
       .then((response) => response.json())
-      .then((json) => setBooks(json));
+      .then((result) => setBooks(result.books));
   }, []);
 
   const [selectedBooks, setSelectedBooks] = useState([]);
