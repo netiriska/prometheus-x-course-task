@@ -18,7 +18,7 @@ export default function BookList(props) {
   };
 
   const filteredData = useMemo(() => {
-    let results = books.books;
+    let results = books;
 
     if (searchQuery) {
       results = results.filter((item) =>
@@ -43,7 +43,7 @@ export default function BookList(props) {
     }
 
     return results;
-  }, [books.books, searchQuery, selectedPrice]);
+  }, [books, searchQuery, selectedPrice]);
   return (
     <div className="books__container">
       <div className="search_select__container">
