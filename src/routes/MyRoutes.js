@@ -16,7 +16,7 @@ export default function MyRoutes() {
 
   const [books, setBooks] = useState({ books: [] });
   useEffect(() => {
-    fetch("./books.json")
+    fetch("/prometheus-x-course-task/books.json")
       .then((response) => response.json())
       .then((json) => setBooks(json));
   }, []);
@@ -37,7 +37,7 @@ export default function MyRoutes() {
       <BooksContext.Provider value={books}>
         <CurrentBookContext.Provider value={currentBook}>
           <SelectedBooksContext.Provider value={selectedBooks}>
-            <BrowserRouter>
+            <BrowserRouter basename={"/prometheus-x-course-task"}>
               <Routes>
                 <Route
                   path="/"
