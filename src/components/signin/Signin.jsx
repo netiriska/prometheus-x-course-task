@@ -11,6 +11,11 @@ export default function Signin(props) {
 
   const handleChange = (e) => {
     const trimmedUsername = e.target.value.trim();
+
+    if (e.currentTarget.value.includes(" ")) {
+      e.currentTarget.value = e.currentTarget.value.replace(/\s/g, "");
+    }
+
     setUsernameValue(trimmedUsername);
     setIsUserTyping(true);
   };
