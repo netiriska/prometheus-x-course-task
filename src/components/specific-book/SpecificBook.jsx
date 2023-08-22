@@ -13,7 +13,9 @@ export default function SpecificBook(props) {
 
   const handleQuantityChange = (event) => {
     const newQuantity = parseInt(event.target.value, 10);
-    setQuantity(newQuantity);
+    if (newQuantity > 0 && newQuantity <= 42) {
+      setQuantity(newQuantity);
+    }
   };
 
   const addToCart = () => {
